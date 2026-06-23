@@ -2,7 +2,7 @@ import { ShieldAlert, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { ContactForm } from "@/components/ContactForm";
+import { ScheduleCall } from "@/components/ScheduleCall";
 import { DISCLAIMER } from "@/lib/content";
 
 /** Verbatim disclaimer block — reused on every page. */
@@ -30,41 +30,40 @@ export function DisclaimerBlock() {
   );
 }
 
-/** Contact / enquiry section — reused on every page. */
+/** Contact / scheduling section — reused on every page. */
 export function ContactSection() {
   return (
     <section id="contact" className="section-pad scroll-mt-20">
       <div className="container-x">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Request a Report"
-              title={
-                <>
-                  Tell us who you need
-                  <br />
-                  <span className="text-gradient">checked</span>
-                </>
-              }
-              description="Share the entity and what decision you're making. We'll reply with scope, turnaround and next steps. The more identifiers you provide, the faster we can match records."
-            />
-            <ul className="mt-8 space-y-3 text-sm text-slate-600">
-              {[
-                "Source-backed findings with links",
-                "Clear date of search on every report",
-                "Scope tailored to your decision",
-              ].map((t) => (
-                <li key={t} className="flex items-center gap-3">
-                  <ArrowRight className="h-4 w-4 text-accent-600" />
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-          <Reveal delayIndex={1}>
-            <ContactForm />
-          </Reveal>
-        </div>
+        <Reveal>
+          <SectionHeading
+            eyebrow="Request a Report"
+            title={
+              <>
+                Book a quick call to{" "}
+                <span className="text-gradient">get started</span>
+              </>
+            }
+            description="Tell us who you need checked over a 15-minute call, or reach out directly on WhatsApp. We'll confirm scope, turnaround and next steps."
+          />
+          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+            {[
+              "Source-backed findings with links",
+              "Clear date of search on every report",
+              "Scope tailored to your decision",
+            ].map((t) => (
+              <li key={t} className="flex items-center gap-2 text-sm text-slate-600">
+                <ArrowRight className="h-4 w-4 text-accent-600" />
+                {t}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+        <Reveal delayIndex={1}>
+          <div className="mt-10">
+            <ScheduleCall />
+          </div>
+        </Reveal>
       </div>
     </section>
   );

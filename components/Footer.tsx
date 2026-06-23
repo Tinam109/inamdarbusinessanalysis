@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { MessageCircle, MapPin, Phone, CalendarClock } from "lucide-react";
 import { LogoMark } from "@/components/Logo";
 
 const columns = [
@@ -49,20 +49,30 @@ export function Footer() {
               companies, vendors, promoters and counterparties.
             </p>
             <div className="mt-5 space-y-2 text-sm text-slate-500">
-              {/* TODO: replace placeholders with real contact details */}
               <a
-                href="mailto:hello@inamdarbusinessanalysis.in"
-                className="flex items-center gap-2 transition-colors hover:text-brand"
-              >
-                <Mail className="h-4 w-4 text-accent-600" />
-                hello@inamdarbusinessanalysis.in
-              </a>
-              <a
-                href="#contact"
+                href="https://wa.me/919106469665?text=Hi%2C%20I%27d%20like%20to%20request%20a%20business%20risk%20report."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 transition-colors hover:text-brand"
               >
                 <MessageCircle className="h-4 w-4 text-accent-600" />
-                WhatsApp enquiries
+                WhatsApp +91 91064 69665
+              </a>
+              <a
+                href="tel:+919106469665"
+                className="flex items-center gap-2 transition-colors hover:text-brand"
+              >
+                <Phone className="h-4 w-4 text-accent-600" />
+                +91 91064 69665
+              </a>
+              <a
+                href="https://cal.com/inamdarlegal/15min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors hover:text-brand"
+              >
+                <CalendarClock className="h-4 w-4 text-accent-600" />
+                Book a 15-min call
               </a>
               <span className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-brand-400" />
