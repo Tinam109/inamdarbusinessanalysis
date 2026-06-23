@@ -229,29 +229,306 @@ export const caseExamples: { tag: string; title: string; desc: string }[] = [
 
 export const faqs: { q: string; a: string }[] = [
   {
-    q: "What exactly is in a report?",
-    a: "A structured PDF covering identity match, the public-record indicators relevant to your scope (MCA/GST, litigation, regulatory, insolvency, director linkages and adverse records), an overall risk summary, and source links with the date of search.",
+    q: "What is a public-record business risk report?",
+    a: "It is a decision-support report that compiles risk indicators about a company, vendor, promoter or counterparty from public and credible sources — MCA/ROC, GST, courts, tribunals, regulators and similar — matched to the entity and presented with source links and a date of search.",
+  },
+  {
+    q: "How is this different from a credit report?",
+    a: "A credit report focuses on creditworthiness and payment behaviour using bureau data and a score. Our report focuses on public-record risk indicators — identity, status, litigation, regulatory, insolvency and linkage signals — and is not a credit rating or score.",
+  },
+  {
+    q: "How is this different from legal due diligence?",
+    a: "Legal due diligence is a lawyer's review and opinion, often on documents you provide. Our report is a public-records search and risk summary. It can support legal due diligence, but it is not a legal opinion and does not replace your lawyer.",
+  },
+  {
+    q: "Is this a legal opinion?",
+    a: "No. We do not provide legal advice or opinions. We report what public records show, in neutral language, so you and your advisers can make an informed decision.",
+  },
+  {
+    q: "Is this a private investigation?",
+    a: "No. We work only with public and credible records and information you provide. We do not conduct surveillance or any non-public investigation.",
+  },
+  {
+    q: "What entities can you check?",
+    a: "Companies and LLPs are the most fully covered because of MCA/ROC records. We can also check directors and promoters, and — depending on identifiers available — proprietorships and partnership firms via GST and other public records.",
+  },
+  {
+    q: "Can you check proprietorships and partnership firms?",
+    a: "Often yes, but coverage is lighter than for companies and LLPs, because unregistered firms have a smaller public-record footprint. GSTIN, PAN and address identifiers help us match records more reliably.",
+  },
+  {
+    q: "Can you check directors and promoters?",
+    a: "Yes. We can review directorships, linked entities and litigation or adverse references matched to a named director or promoter, subject to identity-matching and false-positive checks.",
+  },
+  {
+    q: "Can you check litigation against a company?",
+    a: "Yes, within scope. We search district courts, High Courts, the Supreme Court (where relevant), consumer forums and tribunals such as ITAT and NCLT, matched to the entity or its people as of the date of search.",
+  },
+  {
+    q: "Can you check GST and MCA records?",
+    a: "Yes. GST status and MCA/ROC status, filings and director information are core parts of most reports, depending on what is publicly available for the entity.",
+  },
+  {
+    q: "Do you provide source links?",
+    a: "Yes. Every material finding is documented with a source reference and the date of search, so you can verify it independently.",
+  },
+  {
+    q: "What details do I need to provide?",
+    a: "At minimum the entity name. Any identifiers you have — CIN, LLPIN, GSTIN, PAN, registered address or website — improve matching accuracy and turnaround.",
+  },
+  {
+    q: "What if I only have a company name?",
+    a: "We can still proceed, but name-only searches carry a higher chance of ambiguity and false positives. We will note match confidence and may recommend confirming identifiers before deeper search.",
+  },
+  {
+    q: "Can name-based searches produce false positives?",
+    a: "Yes. Common names and shared addresses can produce matches that belong to a different entity or person. We apply identity-matching and false-positive filtering and flag uncertain matches rather than overstating them.",
   },
   {
     q: "How long does a report take?",
-    a: "A Basic Check is usually 1–2 working days and a Standard Report 3–5 working days. Enhanced reports depend on scope and the number of entities. We confirm the timeline when we agree scope.",
+    a: "A Basic Check is usually 24–48 working hours, a Standard Report 3–5 working days, and an Enhanced Report 5–7 working days or scope-dependent. We confirm the timeline when we agree scope.",
   },
   {
-    q: "What does it cost?",
-    a: "Pricing depends on the depth of check, the number of entities and turnaround time. Share the entity and the decision you're making and we'll suggest the right scope and a quote.",
+    q: "What if no records are found?",
+    a: "We report that no material record was matched in the sources searched, as of the date of search and within scope. Absence of a result does not prove absence of risk — it reflects what the searched public records showed.",
   },
   {
-    q: "Where does the information come from?",
-    a: "From official and credible public sources — MCA/ROC, GST, EPFO/ESIC, courts and tribunals, regulators, insolvency references, debarment lists and similar — plus any identifiers you provide. Every finding is source-linked.",
+    q: "Can this guarantee that the party is safe?",
+    a: "No. No report can guarantee future conduct. We provide source-linked risk indicators to support your decision — not a guarantee, certification or assurance of safety.",
   },
   {
-    q: "Is this a background check on individuals?",
-    a: "Our focus is counterparty due diligence on companies, vendors, promoters and the directors connected to them, using public records. It is not a private investigation or a personal background check.",
+    q: "Can you monitor vendors over time?",
+    a: "Yes. Monitoring keeps selected entities on a watchlist with monthly or quarterly re-checks and alerts when a meaningful new record — litigation, status change, regulatory or insolvency reference — appears.",
   },
   {
-    q: "Can you monitor an entity over time?",
-    a: "Yes. Monitoring keeps selected companies, vendors or promoters on a watchlist with monthly re-checks and alerts when a meaningful new record appears.",
+    q: "Can you check multiple vendors at once?",
+    a: "Yes. We regularly handle vendor portfolios and batches, with per-entity reports and an optional summary. Pricing scales with the number of entities and depth.",
   },
+  {
+    q: "Can you work with lawyers, CAs and consultants?",
+    a: "Yes. Many engagements support professional advisers who need structured, source-linked public-record findings to fold into their own work product.",
+  },
+  {
+    q: "Do you check adverse media?",
+    a: "As an optional add-on we can include public web and adverse-media references where relevant. These are reported as references, not conclusions, and are subject to verification.",
+  },
+  {
+    q: "Do you check sanctions, PEP or watchlists?",
+    a: "Where relevant and in scope, we can include sanctions, watchlist and PEP screening references. These are screening indicators that require careful interpretation, not determinations.",
+  },
+  {
+    q: "Is the information confidential?",
+    a: "Yes. We treat your enquiry and the entities you ask about as confidential and use them only to prepare your report.",
+  },
+  {
+    q: "Can I customise the scope?",
+    a: "Yes. Scope is flexible — by entity type, depth of litigation search, linkage review, add-ons and turnaround. Share the decision you're making and we'll suggest the right scope and a quote.",
+  },
+];
+
+// ----- Report types (productization) -----
+export const reportTypes: {
+  name: string;
+  slug: string;
+  bestFor: string;
+  turnaround: string;
+  priceAnchor: string;
+}[] = [
+  { name: "Basic Check", slug: "basic", bestFor: "Low-value vendors; a quick identity and registration sanity check.", turnaround: "24–48 working hours", priceAnchor: "From ₹1,500 / entity" },
+  { name: "Standard Report", slug: "standard", bestFor: "Vendor onboarding before a PO, distributor/dealer or franchise screening, pre-contract checks.", turnaround: "3–5 working days", priceAnchor: "From ₹3,000 / entity" },
+  { name: "Enhanced Report", slug: "enhanced", bestFor: "High-value vendors, investor red-flag review, acquisitions, lending, partnerships, promoter concerns.", turnaround: "5–7 working days / scope-dependent", priceAnchor: "₹5,000 – ₹7,000 / entity" },
+  { name: "Monitoring", slug: "monitoring", bestFor: "Existing vendor portfolios, repeat suppliers, portfolio companies, high-risk counterparties.", turnaround: "Monthly / quarterly", priceAnchor: "Retainer — quote on scope" },
+];
+
+// Coverage matrix: each row maps to the four report types.
+// Values: true (included), "partial" (basic/where relevant), false (not included), or a label.
+export const coverageMatrix: {
+  feature: string;
+  basic: boolean | "partial";
+  standard: boolean | "partial";
+  enhanced: boolean | "partial";
+  monitoring: boolean | "partial";
+}[] = [
+  { feature: "Entity identity & registration match", basic: true, standard: true, enhanced: true, monitoring: true },
+  { feature: "MCA / ROC status & filings", basic: "partial", standard: true, enhanced: true, monitoring: true },
+  { feature: "GST status indicators", basic: true, standard: true, enhanced: true, monitoring: true },
+  { feature: "EPFO / ESIC & headcount trend", basic: false, standard: "partial", enhanced: true, monitoring: "partial" },
+  { feature: "Litigation search (district & High Court)", basic: false, standard: true, enhanced: true, monitoring: true },
+  { feature: "Supreme Court & tribunal search", basic: false, standard: "partial", enhanced: true, monitoring: "partial" },
+  { feature: "Consumer dispute search", basic: false, standard: true, enhanced: true, monitoring: "partial" },
+  { feature: "NCLT / IBC & tax (ITAT) references", basic: false, standard: "partial", enhanced: true, monitoring: true },
+  { feature: "SEBI / regulatory & debarment references", basic: false, standard: "partial", enhanced: true, monitoring: true },
+  { feature: "Director / promoter linkage review", basic: false, standard: "partial", enhanced: true, monitoring: true },
+  { feature: "Adverse public-record references", basic: false, standard: false, enhanced: true, monitoring: "partial" },
+  { feature: "Risk tags & overall risk rating", basic: "partial", standard: true, enhanced: true, monitoring: true },
+  { feature: "Source-linked appendix", basic: "partial", standard: true, enhanced: true, monitoring: true },
+  { feature: "Ongoing re-checks & change alerts", basic: false, standard: false, enhanced: false, monitoring: true },
+];
+
+// ----- Honest comparison vs alternatives -----
+export const optionComparison: {
+  option: string;
+  goodFor: string;
+  limitation: string;
+  fit: string;
+  highlight?: boolean;
+}[] = [
+  {
+    option: "DIY MCA / GST search",
+    goodFor: "A quick, free status or registration check on one entity.",
+    limitation: "Scattered across portals; no litigation, linkage or risk view; easy to mis-match identities.",
+    fit: "We pull these together and add litigation, linkage and a reviewed risk read.",
+  },
+  {
+    option: "Credit report",
+    goodFor: "Creditworthiness, payment behaviour and a bureau score.",
+    limitation: "Not designed for litigation, regulatory, insolvency or director-linkage red flags.",
+    fit: "We cover the public-record risk side a credit score doesn't show.",
+  },
+  {
+    option: "Legal opinion",
+    goodFor: "A lawyer's formal view on documents or a specific legal question.",
+    limitation: "Higher cost and time; usually assumes you already know what to investigate.",
+    fit: "We surface the public-record red flags worth taking to your lawyer.",
+  },
+  {
+    option: "SaaS database / dashboard",
+    goodFor: "Self-serve data access and bulk lookups for in-house teams.",
+    limitation: "Raw data, not interpretation; licence cost; you do the matching and judgement.",
+    fit: "We deliver a human-reviewed, source-linked report — no licence or learning curve.",
+  },
+  {
+    option: "Private investigator",
+    goodFor: "Field enquiries and non-public information gathering.",
+    limitation: "Variable rigour; sourcing not always transparent or public-record based.",
+    fit: "We stay strictly to public, source-linked records you can verify.",
+  },
+  {
+    option: "Inamdar Business Analysis report",
+    goodFor: "A human-reviewed, source-linked public-record risk picture for a specific decision.",
+    limitation: "Public-record based; not a credit rating, legal opinion or guarantee of future conduct.",
+    fit: "Built for business decisions — sign, invest, lend, onboard or partner.",
+    highlight: true,
+  },
+];
+
+// ----- Risk framework -----
+export const riskTags: { label: string; tone: "neutral" | "amber" | "red" | "accent" }[] = [
+  { label: "No material red flag (in scope)", tone: "accent" },
+  { label: "Identity mismatch", tone: "amber" },
+  { label: "Status concern (inactive / struck-off)", tone: "red" },
+  { label: "GST concern", tone: "amber" },
+  { label: "Filing delay indicator", tone: "amber" },
+  { label: "Charge / borrowing indicator", tone: "neutral" },
+  { label: "Active litigation found", tone: "amber" },
+  { label: "High-severity litigation", tone: "red" },
+  { label: "Consumer dispute found", tone: "amber" },
+  { label: "Tax dispute found", tone: "amber" },
+  { label: "Insolvency / IBC reference", tone: "red" },
+  { label: "Regulatory reference", tone: "red" },
+  { label: "Debarment / blacklist reference", tone: "red" },
+  { label: "Director-linked risk", tone: "amber" },
+  { label: "Promoter-linked risk", tone: "amber" },
+  { label: "Adverse public-record reference", tone: "red" },
+  { label: "Multiple linked entities", tone: "neutral" },
+  { label: "Requires legal review", tone: "neutral" },
+  { label: "Requires financial review", tone: "neutral" },
+  { label: "Requires enhanced diligence", tone: "neutral" },
+];
+
+export const riskRatings: { level: string; tone: "accent" | "amber" | "red" | "neutral"; desc: string }[] = [
+  { level: "Low", tone: "accent", desc: "No material red flag matched within scope as of the date of search. Routine indicators only." },
+  { level: "Moderate", tone: "amber", desc: "Some indicators warrant attention — e.g. active litigation, filing or linkage signals — but nothing decisive on their own." },
+  { level: "High", tone: "red", desc: "One or more significant red flags found — such as high-severity litigation, regulatory or insolvency references." },
+  { level: "Critical", tone: "red", desc: "Serious concern — e.g. struck-off status, debarment, or multiple severe references — warranting careful review before proceeding." },
+  { level: "Insufficient information", tone: "neutral", desc: "Identifiers or public records were too limited to form a reliable view. We flag this rather than guess." },
+];
+
+// ----- Sources & coverage -----
+export const sourceCategories: { title: string; items: string[] }[] = [
+  {
+    title: "Corporate records",
+    items: [
+      "MCA / ROC company or LLP status",
+      "Directors / partners and DIN references",
+      "Registered charges and borrowings",
+      "Filing history indicators",
+      "Registered address",
+      "Linked entities where available",
+    ],
+  },
+  {
+    title: "Tax & statutory indicators",
+    items: [
+      "GST registration status",
+      "GSTIN / entity / address matching",
+      "EPFO / ESIC establishment indicators",
+      "Employee headcount trend where publicly available",
+    ],
+  },
+  {
+    title: "Litigation & disputes",
+    items: [
+      "District courts and High Courts",
+      "Supreme Court references where relevant",
+      "Consumer forums",
+      "ITAT (tax) and NCLT / IBC (insolvency)",
+      "DRT / CESTAT / other tribunals within scope",
+      "Arbitration / public award references where available",
+      "Civil / criminal categorisation where identifiable",
+    ],
+  },
+  {
+    title: "Regulatory & caution references",
+    items: [
+      "SEBI and sectoral regulator orders",
+      "RBI / MCA / other regulator references where relevant",
+      "Debarment / blacklist / caution lists",
+      "Public official adverse references",
+    ],
+  },
+  {
+    title: "Linkage review",
+    items: [
+      "Director / promoter / partner linked entities",
+      "Current and past directorships where available",
+      "Related-entity red flags",
+      "Name / address / identifier matching notes",
+    ],
+  },
+  {
+    title: "Optional add-ons",
+    items: [
+      "Adverse media / public web references",
+      "Sanctions / watchlist / PEP screening where relevant",
+      "Financial indicators where filings are available",
+      "Public credit-rating references where available",
+      "Document consistency checks",
+    ],
+  },
+];
+
+export const sourceLimitations: string[] = [
+  "Public-record availability varies by entity type, registration and portal.",
+  "Name-based searches can produce false positives; identifiers improve accuracy.",
+  "Identity matching depends on the identifiers available to us.",
+  "Absence of a result does not prove absence of risk.",
+  "Reports are not legal opinions, credit ratings or private investigations.",
+];
+
+// ----- Methodology steps -----
+export const methodologySteps: { title: string; desc: string }[] = [
+  { title: "Scope definition", desc: "We agree what decision the report supports, which entities and people are in scope, and the depth of search before we begin." },
+  { title: "Entity identification", desc: "We establish exactly which legal entity is being checked, distinguishing it from similarly named companies." },
+  { title: "Identifier matching", desc: "We anchor the search to CIN, LLPIN, GSTIN, PAN, DIN and registered address so findings attach to the right entity and people." },
+  { title: "Source selection", desc: "We choose the public and credible sources relevant to the scope — corporate, tax, litigation, regulatory and linkage records." },
+  { title: "Public-record search", desc: "We search those sources and capture what is publicly available as of the date of search." },
+  { title: "Name matching & false-positive filtering", desc: "We assess match confidence, set aside likely mismatches, and flag uncertain matches rather than overstating them." },
+  { title: "Risk tagging", desc: "We apply consistent risk tags and an overall internal risk rating based on what the records show within scope." },
+  { title: "Source-link documentation", desc: "We document each material finding with a source reference and the date of search so you can verify independently." },
+  { title: "Report drafting & review", desc: "A human drafts and reviews the report in neutral language — no claims beyond the record, no editorialising." },
+  { title: "Limitations stated", desc: "We state what was in and out of scope, match-confidence caveats, and what the report is not." },
+  { title: "Confidentiality", desc: "Your enquiry and the entities you ask about are kept confidential and used only to prepare your report." },
 ];
 
 export const CONTACT = {

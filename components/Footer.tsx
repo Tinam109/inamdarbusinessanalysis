@@ -15,18 +15,20 @@ const columns = [
   {
     title: "Explore",
     links: [
-      { label: "Report Scope", href: "/#report-scope" },
-      { label: "Risk Signals", href: "/#risk-signals" },
-      { label: "Who It's For", href: "/#who-its-for" },
-      { label: "Use Cases", href: "/#use-cases" },
+      { label: "Report Types", href: "/#report-types" },
+      { label: "Risk Framework", href: "/#risk-framework" },
+      { label: "How We Compare", href: "/#comparison" },
+      { label: "Sample Report", href: "/sample-report" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "Deliverables", href: "/#deliverables" },
+      { label: "Methodology", href: "/methodology" },
+      { label: "Sources & Coverage", href: "/sources" },
+      { label: "About", href: "/about" },
       { label: "Pricing", href: "/#pricing" },
-      { label: "Request a Report", href: "/#contact" },
+      { label: "FAQ", href: "/#faq" },
     ],
   },
 ];

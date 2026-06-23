@@ -22,21 +22,40 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
+const SUBJECT = "ABC Industrial Supplies Private Limited";
+
 const idRows = [
-  { label: "Legal name", value: "Acme Components Pvt Ltd" },
-  { label: "CIN", value: "U28999MH2016PTC •••••• (sample)" },
+  { label: "Legal name", value: "ABC Industrial Supplies Pvt Ltd" },
+  { label: "CIN (fictional)", value: "U51909MH2015PTC000000" },
+  { label: "GSTIN (fictional)", value: "27ABCDE0000F1Z5" },
   { label: "Registration status", value: "Active" },
-  { label: "GSTIN status", value: "Active" },
-  { label: "Incorporation", value: "2016 (sample)" },
-  { label: "Identity match", value: "Matched on CIN + name" },
+  { label: "Registered address", value: "00, Sample Estate, Pune, MH (fictional)" },
+  { label: "Directors (fictional)", value: "A. Sharma, R. Mehta" },
+  { label: "Incorporation", value: "2015 (sample)" },
+  { label: "Identity match", value: "Matched on CIN + GSTIN" },
+];
+
+const sampleTags: { label: string; tone: "amber" | "red" | "accent" | "neutral" }[] = [
+  { label: "Active litigation found", tone: "amber" },
+  { label: "Director-linked risk", tone: "amber" },
+  { label: "Multiple linked entities", tone: "neutral" },
+  { label: "Consumer dispute found", tone: "amber" },
+  { label: "Requires legal review", tone: "neutral" },
 ];
 
 const litigation = [
   { court: "District Court, Pune", type: "Commercial suit", party: "Director (common)", status: "Pending", date: "Filed 2023" },
   { court: "High Court (sample)", type: "Writ petition", party: "Linked entity", status: "Disposed", date: "2021" },
   { court: "Supreme Court (sample)", type: "Civil appeal", party: "Linked entity", status: "Disposed", date: "2022" },
-  { court: "Consumer Forum", type: "Consumer dispute", party: "Acme Components", status: "Pending", date: "2024" },
+  { court: "Consumer Forum", type: "Consumer dispute", party: "ABC Industrial", status: "Pending", date: "2024" },
 ];
+
+const tagToneClass: Record<string, string> = {
+  amber: "border-amber-200 bg-amber-50 text-amber-700",
+  red: "border-red-200 bg-red-50 text-red-700",
+  accent: "border-accent-200 bg-accent-50 text-accent-700",
+  neutral: "border-slate-200 bg-slate-50 text-slate-600",
+};
 
 const compliance = [
   { label: "MCA / ROC filings", note: "Filing indicators current", tone: "clear" },
@@ -114,7 +133,7 @@ export default function SampleReportPage() {
                 </span>
                 <div>
                   <div className="font-display text-lg font-semibold text-brand">
-                    Acme Components Pvt Ltd
+                    {SUBJECT}
                   </div>
                   <div className="text-xs text-slate-500">Subject entity (fictional)</div>
                 </div>
@@ -122,6 +141,33 @@ export default function SampleReportPage() {
               <span className="inline-flex items-center gap-2 self-start rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-sm font-semibold text-amber-700">
                 Overall risk: Moderate
               </span>
+            </div>
+
+            {/* Risk tags */}
+            <div className="mt-5 flex flex-wrap gap-2">
+              {sampleTags.map((t) => (
+                <span
+                  key={t.label}
+                  className={`rounded-full border px-2.5 py-1 text-xs font-medium ${tagToneClass[t.tone]}`}
+                >
+                  {t.label}
+                </span>
+              ))}
+            </div>
+
+            {/* Executive summary */}
+            <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+              <div className="font-display text-sm font-semibold text-brand">
+                Executive summary
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Identity matched on CIN and GSTIN; the entity is active with current filing
+                indicators and a rising employee headcount. However, a pending commercial
+                suit and a consumer dispute were matched, and a common director links the
+                entity to two other companies — one carrying its own litigation. Overall
+                risk is assessed <span className="font-medium text-amber-700">Moderate</span>;
+                the litigation and linkages warrant legal review before a high-value commitment.
+              </p>
             </div>
 
             {/* Identity match */}
@@ -211,8 +257,18 @@ export default function SampleReportPage() {
               </div>
             </div>
 
+            {/* Recommended next steps */}
+            <Section icon={<Check className="h-4 w-4" />} title="6. Recommended next steps">
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li>• Obtain case details for the pending commercial suit before a high-value PO or contract.</li>
+                <li>• Ask a lawyer to review the litigation and director-linkage findings (flagged “Requires legal review”).</li>
+                <li>• Confirm the relationship between the linked entities and the subject's current operations.</li>
+                <li>• Consider Monitoring if this counterparty will be ongoing, to catch new records as they appear.</li>
+              </ul>
+            </Section>
+
             {/* Sources */}
-            <Section icon={<Link2 className="h-4 w-4" />} title="6. Sources & date of search">
+            <Section icon={<Link2 className="h-4 w-4" />} title="7. Sources & date of search">
               <ul className="space-y-1.5 text-sm text-slate-500">
                 <li>• MCA / ROC master data — searched 22 Jun 2026</li>
                 <li>• GST status portal — searched 22 Jun 2026</li>

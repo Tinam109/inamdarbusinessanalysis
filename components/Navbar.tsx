@@ -8,10 +8,11 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
 const navLinks = [
-  { label: "Report Scope", href: "/#report-scope" },
-  { label: "Use Cases", href: "/#use-cases" },
-  { label: "Who It's For", href: "/#who-its-for" },
+  { label: "Report Types", href: "/#report-types" },
+  { label: "Methodology", href: "/methodology" },
+  { label: "Sources", href: "/sources" },
   { label: "Pricing", href: "/#pricing" },
+  { label: "About", href: "/about" },
 ];
 
 const reportPages = [
@@ -19,6 +20,7 @@ const reportPages = [
   { label: "Investor Red Flag Report", href: "/investor-red-flag-report" },
   { label: "Litigation & Compliance Check", href: "/litigation-compliance-check" },
   { label: "Monitoring", href: "/monitoring" },
+  { label: "Sample Report", href: "/sample-report" },
 ];
 
 export function Navbar() {

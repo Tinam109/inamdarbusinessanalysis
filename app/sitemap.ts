@@ -10,6 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/investor-red-flag-report",
     "/litigation-compliance-check",
     "/monitoring",
+    "/methodology",
+    "/sources",
+    "/about",
     "/sample-report",
   ];
   return routes.map((path) => ({

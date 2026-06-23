@@ -36,6 +36,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { HeroDashboard } from "@/components/HeroDashboard";
 import { RiskSignalTabs } from "@/components/RiskSignalTabs";
+import { ReportTypesMatrix } from "@/components/ReportTypesMatrix";
+import { OptionComparison } from "@/components/OptionComparison";
+import { RiskFramework } from "@/components/RiskFramework";
 import { Faq } from "@/components/Faq";
 import { DisclaimerBlock, ContactSection } from "@/components/Sections";
 import {
@@ -216,6 +219,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============ RISK FRAMEWORK ============ */}
+      <section id="risk-framework" className="section-pad scroll-mt-20">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Risk framework"
+              title="Risk tags and a clear overall rating"
+              description="Every report distils its findings into scannable risk tags and one overall rating — so a decision-maker gets the picture in seconds, with the detail and sources behind it."
+              align="center"
+            />
+          </Reveal>
+          <div className="mt-12">
+            <RiskFramework />
+          </div>
+        </div>
+      </section>
+
       {/* ============ WHO IT'S FOR ============ */}
       <section id="who-its-for" className="section-pad scroll-mt-20">
         <div className="container-x">
@@ -329,6 +349,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============ REPORT TYPES ============ */}
+      <section id="report-types" className="section-pad scroll-mt-20 bg-slate-50">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Report types"
+              title="Four report types, matched to the decision"
+              description="From a quick identity sanity-check to deep diligence and ongoing monitoring. Pick the depth the decision needs — we'll confirm scope and quote."
+              align="center"
+            />
+          </Reveal>
+          <Reveal>
+            <div className="mt-12">
+              <ReportTypesMatrix />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ============ WHY TRUST US / METHODOLOGY ============ */}
       <section id="how-we-work" className="section-pad scroll-mt-20">
         <div className="container-x">
@@ -391,6 +430,25 @@ export default function HomePage() {
             <p className="mt-6 text-center text-xs text-slate-400">
               Examples are illustrative and anonymised — not specific clients or entities.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ============ COMPARISON ============ */}
+      <section id="comparison" className="section-pad scroll-mt-20">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              eyebrow="How we compare"
+              title="Where a public-record risk report fits"
+              description="We don't replace your credit bureau, your lawyer or your own judgement. We fill the gap they leave — a reviewed, source-linked read of the public record before you commit."
+              align="center"
+            />
+          </Reveal>
+          <Reveal>
+            <div className="mt-12">
+              <OptionComparison />
+            </div>
           </Reveal>
         </div>
       </section>
