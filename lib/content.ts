@@ -6,8 +6,8 @@
 export const reportScope: { title: string; desc: string }[] = [
   { title: "MCA / ROC records", desc: "Company and LLP master data, status, charges and filing indicators." },
   { title: "GST status & filing indicators", desc: "Registration status and public filing-activity signals where available." },
-  { title: "EPFO & ESIC checks", desc: "Establishment registration indicators for employee-benefit compliance." },
-  { title: "District & High Court searches", desc: "Public case searches matched to the entity or named individuals." },
+  { title: "EPFO & ESIC checks", desc: "Establishment indicators plus employee headcount and how it has trended over time — a useful read on the company's operating scale and momentum." },
+  { title: "District, High Court & Supreme Court", desc: "Public case searches across district courts, High Courts and the Supreme Court, matched to the entity or named individuals." },
   { title: "Consumer court disputes", desc: "Consumer forum matters surfaced from public cause lists and orders." },
   { title: "ITAT & tax litigation", desc: "Income-tax tribunal and tax-dispute records in the public domain." },
   { title: "IBC / insolvency records", desc: "Insolvency and bankruptcy proceedings referenced in public sources." },
@@ -42,7 +42,7 @@ export const riskSignals: {
     summary:
       "Public case searches matched to the entity, its directors or promoters across available court sources.",
     points: [
-      "District & High Court matches",
+      "District, High Court & Supreme Court matches",
       "Consumer forum disputes",
       "Tax tribunal (ITAT) references",
       "Matched as of the date of search",
@@ -196,7 +196,7 @@ export const methodology: { title: string; desc: string }[] = [
   },
   {
     title: "Sources we typically check",
-    desc: "MCA / ROC, GST status, EPFO / ESIC, district and High Court records, consumer forums, ITAT, IBC references, SEBI and regulatory orders, debarment lists and other credible public sources.",
+    desc: "MCA / ROC, GST status, EPFO / ESIC (including employee-count trends), district courts, High Courts and the Supreme Court, consumer forums, ITAT, IBC references, SEBI and regulatory orders, debarment lists and other credible public sources.",
   },
   {
     title: "How we report findings",

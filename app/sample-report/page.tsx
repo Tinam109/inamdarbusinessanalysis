@@ -34,13 +34,14 @@ const idRows = [
 const litigation = [
   { court: "District Court, Pune", type: "Commercial suit", party: "Director (common)", status: "Pending", date: "Filed 2023" },
   { court: "High Court (sample)", type: "Writ petition", party: "Linked entity", status: "Disposed", date: "2021" },
+  { court: "Supreme Court (sample)", type: "Civil appeal", party: "Linked entity", status: "Disposed", date: "2022" },
   { court: "Consumer Forum", type: "Consumer dispute", party: "Acme Components", status: "Pending", date: "2024" },
 ];
 
 const compliance = [
   { label: "MCA / ROC filings", note: "Filing indicators current", tone: "clear" },
   { label: "GST status", note: "Active", tone: "clear" },
-  { label: "EPFO / ESIC", note: "Establishment indicators present", tone: "clear" },
+  { label: "EPFO / ESIC headcount", note: "~120 employees, rising 3 yrs", tone: "clear" },
   { label: "Director disqualification", note: "No record matched", tone: "clear" },
 ] as const;
 

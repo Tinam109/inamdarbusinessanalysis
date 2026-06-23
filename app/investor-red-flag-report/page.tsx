@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 const checks = [
   { icon: Fingerprint, title: "Company & promoter identity", desc: "Match the company, its CIN and the promoters behind it against MCA records." },
-  { icon: Gavel, title: "Litigation history", desc: "District, High Court and tribunal matches against the company and its promoters." },
+  { icon: Gavel, title: "Litigation history", desc: "District, High Court, Supreme Court and tribunal matches against the company and its promoters." },
   { icon: ShieldAlert, title: "Regulatory orders", desc: "Publicly available SEBI and sectoral regulator orders and enforcement references." },
   { icon: FileWarning, title: "Insolvency stress", desc: "IBC proceedings, winding-up references and defaulter-list mentions in public sources." },
   { icon: Network, title: "Promoter linkages", desc: "Other companies tied to the same promoters that may carry their own risk indicators." },

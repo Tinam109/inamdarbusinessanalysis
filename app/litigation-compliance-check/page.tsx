@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 const checks = [
-  { icon: Gavel, title: "District & High Court", desc: "Case searches matched to the entity and named individuals across available court sources." },
+  { icon: Gavel, title: "District, High Court & Supreme Court", desc: "Case searches matched to the entity and named individuals across district courts, High Courts and the Supreme Court." },
   { icon: Scale, title: "Consumer courts", desc: "Consumer forum disputes surfaced from public cause lists and orders." },
   { icon: ReceiptText, title: "ITAT & tax litigation", desc: "Income-tax tribunal and tax-dispute records in the public domain." },
   { icon: Building2, title: "MCA / ROC compliance", desc: "Company status, charges and filing-status indicators from MCA records." },

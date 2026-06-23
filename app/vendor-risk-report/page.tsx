@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 const checks = [
   { icon: Fingerprint, title: "Identity & registration match", desc: "Confirm the vendor's legal entity, CIN/LLPIN and registration status against MCA records." },
   { icon: ReceiptText, title: "GST status indicators", desc: "Registration status and public filing-activity signals where available." },
-  { icon: Building2, title: "Establishment checks", desc: "EPFO / ESIC establishment indicators that point to an operating business." },
-  { icon: Gavel, title: "Litigation search", desc: "District and High Court matches against the entity and its directors." },
+  { icon: Building2, title: "Establishment & headcount", desc: "EPFO / ESIC indicators, including employee headcount and how it has trended over time — a read on the vendor's scale and momentum." },
+  { icon: Gavel, title: "Litigation search", desc: "District, High Court and Supreme Court matches against the entity and its directors." },
   { icon: ShieldAlert, title: "Regulatory & debarment", desc: "Publicly available regulatory orders and government debarment references." },
   { icon: Network, title: "Director linkages", desc: "Other entities tied to the same directors or promoters in public records." },
 ];
