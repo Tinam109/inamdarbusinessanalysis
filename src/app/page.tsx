@@ -1,3 +1,6 @@
+import Logo from "./Logo";
+import SampleReportGate from "./SampleReportGate";
+
 const reportChecks = [
   "MCA / ROC filings and company master data",
   "GST registrations and public compliance indicators",
@@ -79,9 +82,7 @@ export default function Home() {
       <section className="border-b border-[#d9d1c1] bg-[#f7f5ef]">
         <div className="mx-auto flex max-w-7xl flex-col gap-16 px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
           <header className="flex flex-col gap-4 border-b border-[#d9d1c1] pb-6 sm:flex-row sm:items-center sm:justify-between">
-            <a href="#" className="text-lg font-semibold tracking-wide text-[#1f3c35]">
-              Inamdar Business Analysis
-            </a>
+            <Logo />
             <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-[#52645f]">
               <a className="hover:text-[#1f3c35]" href="#scope">
                 Scope
@@ -91,6 +92,9 @@ export default function Home() {
               </a>
               <a className="hover:text-[#1f3c35]" href="#pricing">
                 Pricing
+              </a>
+              <a className="hover:text-[#1f3c35]" href="#sample">
+                Sample
               </a>
               <a className="hover:text-[#1f3c35]" href="#contact">
                 Contact
@@ -118,10 +122,10 @@ export default function Home() {
                   Request a Report
                 </a>
                 <a
-                  href="#scope"
+                  href="#sample"
                   className="inline-flex min-h-12 items-center justify-center rounded-md border border-[#9d8d73] px-6 text-sm font-semibold text-[#1f3c35] transition hover:border-[#1f3c35]"
                 >
-                  View Report Scope
+                  Download Sample
                 </a>
               </div>
             </div>
@@ -236,6 +240,42 @@ export default function Home() {
               </ul>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="sample" className="border-y border-[#d9d1c1] bg-[#eef1e7]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-12">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#9a632f]">
+              Sample report
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-[#132320]">
+              See how a public-records risk report is structured.
+            </h2>
+            <p className="mt-5 leading-7 text-[#596a65]">
+              Download a clean sample PDF showing the layout, source-note structure, risk summary,
+              litigation table and compliance indicators used in a typical report.
+            </p>
+          </div>
+          <div className="border border-[#cbd2c3] bg-white p-5 shadow-sm">
+            <div className="grid gap-4 sm:grid-cols-[0.7fr_1fr] sm:items-center">
+              <div className="rounded-md border border-[#d9d1c1] bg-[#1f3c35] p-5 text-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#d9b27d]">PDF preview</p>
+                <h3 className="mt-16 text-2xl font-semibold leading-snug">Sample Business Risk Report</h3>
+                <p className="mt-4 text-sm leading-6 text-[#edf2ed]">
+                  Illustrative company profile, public-source checks and summary tables.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-[#1f3c35]">Unlock the sample PDF</h3>
+                <p className="mt-3 text-sm leading-6 text-[#596a65]">
+                  Enter your details to reveal a direct download button. The file downloads instead of opening
+                  in the browser.
+                </p>
+              </div>
+            </div>
+            <SampleReportGate />
+          </div>
         </div>
       </section>
 
