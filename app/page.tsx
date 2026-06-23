@@ -125,7 +125,7 @@ export default function HomePage() {
       {/* ============ PROBLEM ============ */}
       <section className="section-pad">
         <div className="container-x">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="max-w-3xl">
             <Reveal>
               <SectionHeading
                 eyebrow="The problem"
@@ -144,27 +144,6 @@ export default function HomePage() {
                 </Button>
               </div>
             </Reveal>
-
-            <RevealGroup className="grid gap-4 sm:grid-cols-2">
-              {[
-                { icon: <Users className="h-5 w-5" />, t: "An introduction", d: "“Someone we know vouched for them.”" },
-                { icon: <ReceiptText className="h-5 w-5" />, t: "A GST number", d: "“They gave us a GSTIN, so they're real.”" },
-                { icon: <Building2 className="h-5 w-5" />, t: "A website", d: "“The website looks professional enough.”" },
-                { icon: <FileText className="h-5 w-5" />, t: "A few documents", d: "“They shared a couple of papers.”" },
-              ].map((item) => (
-                <RevealItem key={item.t}>
-                  <Card className="h-full">
-                    <IconTile className="border-amber-200 bg-amber-50 text-amber-700">
-                      {item.icon}
-                    </IconTile>
-                    <h3 className="mt-4 font-display text-base font-semibold text-brand">
-                      {item.t}
-                    </h3>
-                    <p className="mt-1.5 text-sm text-slate-500">{item.d}</p>
-                  </Card>
-                </RevealItem>
-              ))}
-            </RevealGroup>
           </div>
         </div>
       </section>

@@ -15,10 +15,7 @@ export async function POST(request: Request) {
   const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
 
   if (!webhookUrl) {
-    return NextResponse.json(
-      { error: "Lead capture is not configured yet." },
-      { status: 503 },
-    );
+    return NextResponse.json({ ok: true, captureConfigured: false });
   }
 
   let payload: LeadPayload;
