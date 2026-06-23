@@ -6,14 +6,14 @@ import { DisclaimerBlock, ContactSection } from "@/components/Sections";
 import { sourceCategories, sourceLimitations } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Sources & Coverage — What Public Records We Search",
+  title: "Sources & Coverage, What Public Records We Search",
   description:
-    "The public and credible sources an Inamdar Business Analysis report can cover — corporate (MCA/ROC), tax (GST, EPFO/ESIC), litigation (courts, tribunals, NCLT/IBC), regulatory and caution references, and director/promoter linkages. Coverage depends on scope and public-record availability.",
+    "The public and credible sources an Inamdar Business Analysis report can cover, corporate (MCA/ROC), tax (GST, EPFO/ESIC), litigation (courts, tribunals, NCLT/IBC), regulatory and caution references, and director/promoter linkages. Coverage depends on scope and public-record availability.",
   alternates: { canonical: "/sources" },
   openGraph: {
     title: "Sources & Coverage | Inamdar Business Analysis",
     description:
-      "Corporate, tax, litigation, regulatory and linkage sources we can search — with honest limitations.",
+      "Corporate, tax, litigation, regulatory and linkage sources we can search, with honest limitations.",
   },
 };
 
@@ -31,7 +31,7 @@ export default function SourcesPage() {
               The public records we can search
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-500">
-              What a report can cover depends on scope, entity type, the identifiers available and what is publicly accessible. These are the source categories we typically draw on — every material finding is source-linked and dated.
+              What a report can cover depends on scope, entity type, the identifiers available and what is publicly accessible. These are the source categories we typically draw on, every material finding is source-linked and dated.
             </p>
           </Reveal>
         </div>

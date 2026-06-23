@@ -43,7 +43,7 @@ export function Reveal({
   );
 }
 
-/** Stagger container — children should use RevealItem. */
+/** Stagger container, children should use RevealItem. */
 export function RevealGroup({
   children,
   className,

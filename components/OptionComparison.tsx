@@ -39,7 +39,7 @@ export function OptionComparison() {
         </table>
       </div>
       <p className="border-t border-slate-100 px-4 py-3 text-xs text-slate-400">
-        Positioned honestly — each option has its place. We complement credit reports and legal advice rather than replace them.
+        Positioned honestly, each option has its place. We complement credit reports and legal advice rather than replace them.
       </p>
     </div>
   );

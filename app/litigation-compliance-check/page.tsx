@@ -13,13 +13,13 @@ import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/componen
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
 
 export const metadata: Metadata = {
-  title: "Litigation & Compliance Check — Public Records Search",
+  title: "Litigation & Compliance Check, Public Records Search",
   description:
     "Public-records search across courts, compliance, tax and regulatory databases for founders, CAs, CSs, lawyers and consultants. Source-backed litigation and compliance indicators with a clear date of search.",
   openGraph: {
     title: "Litigation & Compliance Check | Inamdar Business Analysis",
     description:
-      "Public-records search across courts, compliance, tax and regulatory databases — source-backed and dated.",
+      "Public-records search across courts, compliance, tax and regulatory databases, source-backed and dated.",
   },
 };
 
@@ -61,7 +61,7 @@ export default function LitigationComplianceCheckPage() {
             <span className="text-gradient">regulatory databases.</span>
           </>
         }
-        description="A structured search of available public records — built for professionals who need source-backed litigation and compliance indicators they can stand behind, with a clear date of search."
+        description="A structured search of available public records, built for professionals who need source-backed litigation and compliance indicators they can stand behind, with a clear date of search."
         bullets={["Court searches", "Tax & compliance", "Source-linked findings"]}
       />
 
@@ -86,7 +86,7 @@ export default function LitigationComplianceCheckPage() {
             <span className="text-gradient">search result</span> you can rely on
           </>
         }
-        description="Organised, cited and dated — ready to fold into your own professional work product."
+        description="Organised, cited and dated, ready to fold into your own professional work product."
         items={deliverables}
       />
 

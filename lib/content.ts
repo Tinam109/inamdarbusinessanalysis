@@ -6,7 +6,7 @@
 export const reportScope: { title: string; desc: string }[] = [
   { title: "MCA / ROC records", desc: "Company and LLP master data, status, charges and filing indicators." },
   { title: "GST status & filing indicators", desc: "Registration status and public filing-activity signals where available." },
-  { title: "EPFO & ESIC checks", desc: "Establishment indicators plus employee headcount and how it has trended over time — a useful read on the company's operating scale and momentum." },
+  { title: "EPFO & ESIC checks", desc: "Establishment indicators plus employee headcount and how it has trended over time, a useful read on the company's operating scale and momentum." },
   { title: "District, High Court & Supreme Court", desc: "Public case searches across district courts, High Courts and the Supreme Court, matched to the entity or named individuals." },
   { title: "Consumer court disputes", desc: "Consumer forum matters surfaced from public cause lists and orders." },
   { title: "ITAT & tax litigation", desc: "Income-tax tribunal and tax-dispute records in the public domain." },
@@ -165,7 +165,7 @@ export const pricingTiers: {
   {
     name: "Enhanced Report",
     tagline: "Deeper diligence across linkages and regulatory records.",
-    priceAnchor: "₹5,000 – ₹7,000",
+    priceAnchor: "₹5,000 to ₹7,000",
     turnaround: "Timeline depends on scope",
     features: [
       "Everything in Standard Report",
@@ -192,7 +192,7 @@ export const pricingTiers: {
 export const methodology: { title: string; desc: string }[] = [
   {
     title: "How we match identity",
-    desc: "We anchor every search to verifiable identifiers — CIN, LLPIN, GSTIN, director DINs and registered names — so findings are tied to the right entity, not a similarly named one.",
+    desc: "We anchor every search to verifiable identifiers, CIN, LLPIN, GSTIN, director DINs and registered names, so findings are tied to the right entity, not a similarly named one.",
   },
   {
     title: "Sources we typically check",
@@ -200,7 +200,7 @@ export const methodology: { title: string; desc: string }[] = [
   },
   {
     title: "How we report findings",
-    desc: "Each finding carries its source link and the date of search. We report what the records show in neutral language — no editorialising, no claims beyond the record.",
+    desc: "Each finding carries its source link and the date of search. We report what the records show in neutral language, no editorialising, no claims beyond the record.",
   },
   {
     title: "What we don't do",
@@ -208,12 +208,12 @@ export const methodology: { title: string; desc: string }[] = [
   },
 ];
 
-// Illustrative, anonymised examples — not real clients or entities.
+// Illustrative, anonymised examples, not real clients or entities.
 export const caseExamples: { tag: string; title: string; desc: string }[] = [
   {
     tag: "Vendor onboarding",
     title: "Active GST, but director-linked litigation surfaced",
-    desc: "A supplier looked clean on the surface — valid GSTIN and active status — but a search surfaced pending litigation tied to a common director across two linked entities.",
+    desc: "A supplier looked clean on the surface, valid GSTIN and active status, but a search surfaced pending litigation tied to a common director across two linked entities.",
   },
   {
     tag: "Investment screening",
@@ -223,18 +223,18 @@ export const caseExamples: { tag: string; title: string; desc: string }[] = [
   {
     tag: "Pre-contract check",
     title: "One address, several entities",
-    desc: "A counterparty's registration matched, but the registered address mapped to multiple entities with overlapping directors — a pattern worth understanding before signing.",
+    desc: "A counterparty's registration matched, but the registered address mapped to multiple entities with overlapping directors, a pattern worth understanding before signing.",
   },
 ];
 
 export const faqs: { q: string; a: string }[] = [
   {
     q: "What is a public-record business risk report?",
-    a: "It is a decision-support report that compiles risk indicators about a company, vendor, promoter or counterparty from public and credible sources — MCA/ROC, GST, courts, tribunals, regulators and similar — matched to the entity and presented with source links and a date of search.",
+    a: "It is a decision-support report that compiles risk indicators about a company, vendor, promoter or counterparty from public and credible sources, MCA/ROC, GST, courts, tribunals, regulators and similar, matched to the entity and presented with source links and a date of search.",
   },
   {
     q: "How is this different from a credit report?",
-    a: "A credit report focuses on creditworthiness and payment behaviour using bureau data and a score. Our report focuses on public-record risk indicators — identity, status, litigation, regulatory, insolvency and linkage signals — and is not a credit rating or score.",
+    a: "A credit report focuses on creditworthiness and payment behaviour using bureau data and a score. Our report focuses on public-record risk indicators, identity, status, litigation, regulatory, insolvency and linkage signals, and is not a credit rating or score.",
   },
   {
     q: "How is this different from legal due diligence?",
@@ -250,7 +250,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What entities can you check?",
-    a: "Companies and LLPs are the most fully covered because of MCA/ROC records. We can also check directors and promoters, and — depending on identifiers available — proprietorships and partnership firms via GST and other public records.",
+    a: "Companies and LLPs are the most fully covered because of MCA/ROC records. We can also check directors and promoters, and, depending on identifiers available, proprietorships and partnership firms via GST and other public records.",
   },
   {
     q: "Can you check proprietorships and partnership firms?",
@@ -274,7 +274,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What details do I need to provide?",
-    a: "At minimum the entity name. Any identifiers you have — CIN, LLPIN, GSTIN, PAN, registered address or website — improve matching accuracy and turnaround.",
+    a: "At minimum the entity name. Any identifiers you have, CIN, LLPIN, GSTIN, PAN, registered address or website, improve matching accuracy and turnaround.",
   },
   {
     q: "What if I only have a company name?",
@@ -290,15 +290,15 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What if no records are found?",
-    a: "We report that no material record was matched in the sources searched, as of the date of search and within scope. Absence of a result does not prove absence of risk — it reflects what the searched public records showed.",
+    a: "We report that no material record was matched in the sources searched, as of the date of search and within scope. Absence of a result does not prove absence of risk, it reflects what the searched public records showed.",
   },
   {
     q: "Can this guarantee that the party is safe?",
-    a: "No. No report can guarantee future conduct. We provide source-linked risk indicators to support your decision — not a guarantee, certification or assurance of safety.",
+    a: "No. No report can guarantee future conduct. We provide source-linked risk indicators to support your decision, not a guarantee, certification or assurance of safety.",
   },
   {
     q: "Can you monitor vendors over time?",
-    a: "Yes. Monitoring keeps selected entities on a watchlist with monthly or quarterly re-checks and alerts when a meaningful new record — litigation, status change, regulatory or insolvency reference — appears.",
+    a: "Yes. Monitoring keeps selected entities on a watchlist with monthly or quarterly re-checks and alerts when a meaningful new record, litigation, status change, regulatory or insolvency reference, appears.",
   },
   {
     q: "Can you check multiple vendors at once?",
@@ -322,7 +322,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Can I customise the scope?",
-    a: "Yes. Scope is flexible — by entity type, depth of litigation search, linkage review, add-ons and turnaround. Share the decision you're making and we'll suggest the right scope and a quote.",
+    a: "Yes. Scope is flexible, by entity type, depth of litigation search, linkage review, add-ons and turnaround. Share the decision you're making and we'll suggest the right scope and a quote.",
   },
 ];
 
@@ -336,8 +336,8 @@ export const reportTypes: {
 }[] = [
   { name: "Basic Check", slug: "basic", bestFor: "Low-value vendors; a quick identity and registration sanity check.", turnaround: "24–48 working hours", priceAnchor: "From ₹1,500 / entity" },
   { name: "Standard Report", slug: "standard", bestFor: "Vendor onboarding before a PO, distributor/dealer or franchise screening, pre-contract checks.", turnaround: "3–5 working days", priceAnchor: "From ₹3,000 / entity" },
-  { name: "Enhanced Report", slug: "enhanced", bestFor: "High-value vendors, investor red-flag review, acquisitions, lending, partnerships, promoter concerns.", turnaround: "5–7 working days / scope-dependent", priceAnchor: "₹5,000 – ₹7,000 / entity" },
-  { name: "Monitoring", slug: "monitoring", bestFor: "Existing vendor portfolios, repeat suppliers, portfolio companies, high-risk counterparties.", turnaround: "Monthly / quarterly", priceAnchor: "Retainer — quote on scope" },
+  { name: "Enhanced Report", slug: "enhanced", bestFor: "High-value vendors, investor red-flag review, acquisitions, lending, partnerships, promoter concerns.", turnaround: "5–7 working days / scope-dependent", priceAnchor: "₹5,000 to ₹7,000 / entity" },
+  { name: "Monitoring", slug: "monitoring", bestFor: "Existing vendor portfolios, repeat suppliers, portfolio companies, high-risk counterparties.", turnaround: "Monthly / quarterly", priceAnchor: "Retainer, quote on scope" },
 ];
 
 // Coverage matrix: each row maps to the four report types.
@@ -395,7 +395,7 @@ export const optionComparison: {
     option: "SaaS database / dashboard",
     goodFor: "Self-serve data access and bulk lookups for in-house teams.",
     limitation: "Raw data, not interpretation; licence cost; you do the matching and judgement.",
-    fit: "We deliver a human-reviewed, source-linked report — no licence or learning curve.",
+    fit: "We deliver a human-reviewed, source-linked report, no licence or learning curve.",
   },
   {
     option: "Private investigator",
@@ -407,7 +407,7 @@ export const optionComparison: {
     option: "Inamdar Business Analysis report",
     goodFor: "A human-reviewed, source-linked public-record risk picture for a specific decision.",
     limitation: "Public-record based; not a credit rating, legal opinion or guarantee of future conduct.",
-    fit: "Built for business decisions — sign, invest, lend, onboard or partner.",
+    fit: "Built for business decisions, sign, invest, lend, onboard or partner.",
     highlight: true,
   },
 ];
@@ -438,9 +438,9 @@ export const riskTags: { label: string; tone: "neutral" | "amber" | "red" | "acc
 
 export const riskRatings: { level: string; tone: "accent" | "amber" | "red" | "neutral"; desc: string }[] = [
   { level: "Low", tone: "accent", desc: "No material red flag matched within scope as of the date of search. Routine indicators only." },
-  { level: "Moderate", tone: "amber", desc: "Some indicators warrant attention — e.g. active litigation, filing or linkage signals — but nothing decisive on their own." },
-  { level: "High", tone: "red", desc: "One or more significant red flags found — such as high-severity litigation, regulatory or insolvency references." },
-  { level: "Critical", tone: "red", desc: "Serious concern — e.g. struck-off status, debarment, or multiple severe references — warranting careful review before proceeding." },
+  { level: "Moderate", tone: "amber", desc: "Some indicators warrant attention, e.g. active litigation, filing or linkage signals, but nothing decisive on their own." },
+  { level: "High", tone: "red", desc: "One or more significant red flags found, such as high-severity litigation, regulatory or insolvency references." },
+  { level: "Critical", tone: "red", desc: "Serious concern, e.g. struck-off status, debarment, or multiple severe references, warranting careful review before proceeding." },
   { level: "Insufficient information", tone: "neutral", desc: "Identifiers or public records were too limited to form a reliable view. We flag this rather than guess." },
 ];
 
@@ -521,12 +521,12 @@ export const methodologySteps: { title: string; desc: string }[] = [
   { title: "Scope definition", desc: "We agree what decision the report supports, which entities and people are in scope, and the depth of search before we begin." },
   { title: "Entity identification", desc: "We establish exactly which legal entity is being checked, distinguishing it from similarly named companies." },
   { title: "Identifier matching", desc: "We anchor the search to CIN, LLPIN, GSTIN, PAN, DIN and registered address so findings attach to the right entity and people." },
-  { title: "Source selection", desc: "We choose the public and credible sources relevant to the scope — corporate, tax, litigation, regulatory and linkage records." },
+  { title: "Source selection", desc: "We choose the public and credible sources relevant to the scope, corporate, tax, litigation, regulatory and linkage records." },
   { title: "Public-record search", desc: "We search those sources and capture what is publicly available as of the date of search." },
   { title: "Name matching & false-positive filtering", desc: "We assess match confidence, set aside likely mismatches, and flag uncertain matches rather than overstating them." },
   { title: "Risk tagging", desc: "We apply consistent risk tags and an overall internal risk rating based on what the records show within scope." },
   { title: "Source-link documentation", desc: "We document each material finding with a source reference and the date of search so you can verify independently." },
-  { title: "Report drafting & review", desc: "A human drafts and reviews the report in neutral language — no claims beyond the record, no editorialising." },
+  { title: "Report drafting & review", desc: "A human drafts and reviews the report in neutral language, no claims beyond the record, no editorialising." },
   { title: "Limitations stated", desc: "We state what was in and out of scope, match-confidence caveats, and what the report is not." },
   { title: "Confidentiality", desc: "Your enquiry and the entities you ask about are kept confidential and used only to prepare your report." },
 ];

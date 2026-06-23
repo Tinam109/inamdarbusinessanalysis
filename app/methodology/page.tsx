@@ -9,12 +9,12 @@ import { methodologySteps, DISCLAIMER } from "@/lib/content";
 export const metadata: Metadata = {
   title: "How We Prepare Public-Records Risk Reports | Methodology",
   description:
-    "Our methodology for preparing source-linked Indian public-record business risk reports — scope definition, identifier matching, source selection, false-positive filtering, risk tagging, human review and confidentiality.",
+    "Our methodology for preparing source-linked Indian public-record business risk reports, scope definition, identifier matching, source selection, false-positive filtering, risk tagging, human review and confidentiality.",
   alternates: { canonical: "/methodology" },
   openGraph: {
     title: "How We Prepare Public-Records Risk Reports",
     description:
-      "Scope, identifier matching, source selection, false-positive filtering, risk tagging and human review — the disciplined way every report is built.",
+      "Scope, identifier matching, source selection, false-positive filtering, risk tagging and human review, the disciplined way every report is built.",
   },
 };
 
@@ -32,7 +32,7 @@ export default function MethodologyPage() {
               How we prepare public-records risk reports
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-500">
-              Every report follows the same disciplined process — anchored to verifiable identifiers, drawn from public and credible sources, filtered for false positives, and reviewed by a human before it reaches you.
+              Every report follows the same disciplined process, anchored to verifiable identifiers, drawn from public and credible sources, filtered for false positives, and reviewed by a human before it reaches you.
             </p>
           </Reveal>
         </div>

@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ScheduleCall } from "@/components/ScheduleCall";
 import { DISCLAIMER } from "@/lib/content";
 
-/** Verbatim disclaimer block — reused on every page. */
+/** Verbatim disclaimer block, reused on every page. */
 export function DisclaimerBlock() {
   return (
     <section className="section-pad">
@@ -17,7 +17,7 @@ export function DisclaimerBlock() {
             </div>
             <div>
               <h3 className="font-display text-lg font-semibold text-brand">
-                Important — what this report is and is not
+                Important, what this report is and is not
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 {DISCLAIMER}
@@ -30,7 +30,7 @@ export function DisclaimerBlock() {
   );
 }
 
-/** Contact / scheduling section — reused on every page. */
+/** Contact / scheduling section, reused on every page. */
 export function ContactSection() {
   return (
     <section id="contact" className="section-pad scroll-mt-20">
@@ -44,7 +44,7 @@ export function ContactSection() {
                 <span className="text-gradient">We&apos;ll suggest the right scope.</span>
               </>
             }
-            description="Not sure which check you need? Tell us the entity and the decision you're making over a 15-minute call, or message us on WhatsApp. We'll confirm scope, turnaround and a quote — no obligation."
+            description="Not sure which check you need? Tell us the entity and the decision you're making over a 15-minute call, or message us on WhatsApp. We'll confirm scope, turnaround and a quote, no obligation."
           />
           <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
             {[

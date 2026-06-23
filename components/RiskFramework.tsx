@@ -30,7 +30,7 @@ export function RiskFramework() {
           Overall risk rating
         </h3>
         <p className="mt-2 text-sm text-slate-500">
-          Each report carries one internal rating, based on what public records show within scope. It is a decision-support rating — not a credit rating or legal conclusion.
+          Each report carries one internal rating, based on what public records show within scope. It is a decision-support rating, not a credit rating or legal conclusion.
         </p>
         <div className="mt-5 space-y-3">
           {riskRatings.map((r) => (

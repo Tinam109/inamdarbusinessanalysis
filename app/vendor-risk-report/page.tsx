@@ -14,27 +14,27 @@ import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/componen
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
 
 export const metadata: Metadata = {
-  title: "Vendor Risk Report — Check Vendors Before You Onboard",
+  title: "Vendor Risk Report, Check Vendors Before You Onboard",
   description:
     "Public-records based vendor risk reports for procurement teams, SMEs and corporates. Verify a supplier's identity, status, litigation and compliance indicators before onboarding, issuing a PO or extending business credit.",
   openGraph: {
     title: "Vendor Risk Report | Inamdar Business Analysis",
     description:
-      "Check vendors before onboarding, issuing POs or extending business credit — with source-backed public records.",
+      "Check vendors before onboarding, issuing POs or extending business credit, with source-backed public records.",
   },
 };
 
 const checks = [
   { icon: Fingerprint, title: "Identity & registration match", desc: "Confirm the vendor's legal entity, CIN/LLPIN and registration status against MCA records." },
   { icon: ReceiptText, title: "GST status indicators", desc: "Registration status and public filing-activity signals where available." },
-  { icon: Building2, title: "Establishment & headcount", desc: "EPFO / ESIC indicators, including employee headcount and how it has trended over time — a read on the vendor's scale and momentum." },
+  { icon: Building2, title: "Establishment & headcount", desc: "EPFO / ESIC indicators, including employee headcount and how it has trended over time, a read on the vendor's scale and momentum." },
   { icon: Gavel, title: "Litigation search", desc: "District, High Court and Supreme Court matches against the entity and its directors." },
   { icon: ShieldAlert, title: "Regulatory & debarment", desc: "Publicly available regulatory orders and government debarment references." },
   { icon: Network, title: "Director linkages", desc: "Other entities tied to the same directors or promoters in public records." },
 ];
 
 const steps = [
-  { title: "Share the vendor", desc: "Send the vendor name and any IDs you already have — GSTIN, CIN or website." },
+  { title: "Share the vendor", desc: "Send the vendor name and any IDs you already have, GSTIN, CIN or website." },
   { title: "We compile records", desc: "We match identity and pull risk indicators from official and credible public sources." },
   { title: "You get a report", desc: "A structured PDF with source links and the date of search, in plain language." },
   { title: "Onboard with eyes open", desc: "Use the overall risk read to approve, conditionally approve or pause onboarding." },
@@ -62,7 +62,7 @@ export default function VendorRiskReportPage() {
             <span className="text-gradient">business credit.</span>
           </>
         }
-        description="A focused, public-records based read on a supplier — so procurement teams, SMEs and corporates can onboard counterparties with a clear view of identity, status and risk indicators."
+        description="A focused, public-records based read on a supplier, so procurement teams, SMEs and corporates can onboard counterparties with a clear view of identity, status and risk indicators."
         bullets={["Identity match", "Litigation indicators", "Compliance signals"]}
       />
 

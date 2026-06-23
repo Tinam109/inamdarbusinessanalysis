@@ -84,7 +84,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
               We prepare source-linked public-record risk reports on Indian
-              companies, vendors and promoters — covering identity, filings,
+              companies, vendors and promoters, covering identity, filings,
               litigation, regulatory references, insolvency indicators and
               director linkages.
             </p>
@@ -135,7 +135,7 @@ export default function HomePage() {
                     <span className="text-gradient">trust, not records.</span>
                   </>
                 }
-                description="Many businesses rely on introductions, polished websites, a GST number and a few basic documents — without ever checking the public-record risk indicators that already exist. By the time a dispute, default or compliance gap surfaces, the contract is signed, the cheque is cleared and the vendor is onboarded."
+                description="Many businesses rely on introductions, polished websites, a GST number and a few basic documents, without ever checking the public-record risk indicators that already exist. By the time a dispute, default or compliance gap surfaces, the contract is signed, the cheque is cleared and the vendor is onboarded."
               />
               <div className="mt-8">
                 <Button href="#report-scope" variant="ghost">
@@ -226,7 +226,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Risk framework"
               title="Risk tags and a clear overall rating"
-              description="Every report distils its findings into scannable risk tags and one overall rating — so a decision-maker gets the picture in seconds, with the detail and sources behind it."
+              description="Every report distils its findings into scannable risk tags and one overall rating, so a decision-maker gets the picture in seconds, with the detail and sources behind it."
               align="center"
             />
           </Reveal>
@@ -317,7 +317,7 @@ export default function HomePage() {
                     <span className="text-gradient">act on</span>
                   </>
                 }
-                description="Every engagement ends in a structured PDF that any decision-maker can read in minutes — with the sources behind each finding and the date they were checked."
+                description="Every engagement ends in a structured PDF that any decision-maker can read in minutes, with the sources behind each finding and the date they were checked."
               />
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href="/sample-report" variant="secondary">
@@ -356,7 +356,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Report types"
               title="Four report types, matched to the decision"
-              description="From a quick identity sanity-check to deep diligence and ongoing monitoring. Pick the depth the decision needs — we'll confirm scope and quote."
+              description="From a quick identity sanity-check to deep diligence and ongoing monitoring. Pick the depth the decision needs, we'll confirm scope and quote."
               align="center"
             />
           </Reveal>
@@ -375,7 +375,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="How we work"
               title="Why teams trust the findings"
-              description="Every report is built the same disciplined way — anchored to verifiable identifiers, drawn from public sources, and reported with the source and date behind each finding."
+              description="Every report is built the same disciplined way, anchored to verifiable identifiers, drawn from public sources, and reported with the source and date behind each finding."
               align="center"
             />
           </Reveal>
@@ -428,7 +428,7 @@ export default function HomePage() {
           </RevealGroup>
           <Reveal>
             <p className="mt-6 text-center text-xs text-slate-400">
-              Examples are illustrative and anonymised — not specific clients or entities.
+              Examples are illustrative and anonymised, not specific clients or entities.
             </p>
           </Reveal>
         </div>
@@ -441,7 +441,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="How we compare"
               title="Where a public-record risk report fits"
-              description="We don't replace your credit bureau, your lawyer or your own judgement. We fill the gap they leave — a reviewed, source-linked read of the public record before you commit."
+              description="We don't replace your credit bureau, your lawyer or your own judgement. We fill the gap they leave, a reviewed, source-linked read of the public record before you commit."
               align="center"
             />
           </Reveal>

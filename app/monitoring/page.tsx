@@ -13,13 +13,13 @@ import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/componen
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
 
 export const metadata: Metadata = {
-  title: "Monitoring — Monthly Watchlist for Companies & Promoters",
+  title: "Monitoring, Monthly Watchlist for Companies & Promoters",
   description:
     "Monthly watchlist monitoring for selected companies, vendors or promoters. Get periodic re-checks and alerts when public records change, so risk indicators don't go stale after onboarding or investment.",
   openGraph: {
     title: "Monitoring | Inamdar Business Analysis",
     description:
-      "Monthly watchlist monitoring for selected companies, vendors or promoters — with change alerts.",
+      "Monthly watchlist monitoring for selected companies, vendors or promoters, with change alerts.",
   },
 };
 
@@ -61,7 +61,7 @@ export default function MonitoringPage() {
             <span className="text-gradient">monthly watchlist.</span>
           </>
         }
-        description="Risk indicators don't stop at onboarding or investment. Monitoring keeps chosen companies, vendors and promoters under periodic public-records review — and tells you when something changes."
+        description="Risk indicators don't stop at onboarding or investment. Monitoring keeps chosen companies, vendors and promoters under periodic public-records review, and tells you when something changes."
         bullets={["Monthly re-checks", "Change alerts", "Periodic summaries"]}
       />
 

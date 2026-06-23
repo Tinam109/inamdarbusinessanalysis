@@ -8,16 +8,16 @@ import { LogoMark } from "@/components/Logo";
 import { ContactSection } from "@/components/Sections";
 
 export const metadata: Metadata = {
-  title: "About — The People Behind the Reports",
+  title: "About, The People Behind the Reports",
   description:
-    "About Inamdar Business Analysis — a human-reviewed, source-linked Indian public-record risk reporting service built on careful methodology, public-record-only sourcing and honest reporting.",
+    "About Inamdar Business Analysis, a human-reviewed, source-linked Indian public-record risk reporting service built on careful methodology, public-record-only sourcing and honest reporting.",
   alternates: { canonical: "/about" },
 };
 
 // NOTE: Placeholders in [brackets] are for the founder to replace with real details.
 const principles = [
   { icon: Link2, title: "Source-linked, always", desc: "Every material finding points to where it came from and the date it was searched. If we can't source it, we don't assert it." },
-  { icon: Eye, title: "Public records only", desc: "We work strictly with public and credible records and information you provide — never surveillance or non-public methods." },
+  { icon: Eye, title: "Public records only", desc: "We work strictly with public and credible records and information you provide, never surveillance or non-public methods." },
   { icon: ScrollText, title: "Careful, neutral reporting", desc: "We report what the records show in plain language, flag match-confidence, and never overstate or editorialise." },
   { icon: ShieldCheck, title: "Decision-support, not verdicts", desc: "Our reports inform your decision. They are not credit ratings, legal opinions, private investigations or guarantees." },
 ];
@@ -36,7 +36,7 @@ export default function AboutPage() {
               Human-reviewed reports, built on public records
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-500">
-              Inamdar Business Analysis prepares source-linked Indian public-record risk reports, written for real business decisions — checking companies, vendors, promoters and counterparties before you sign, invest, lend or onboard.
+              Inamdar Business Analysis prepares source-linked Indian public-record risk reports, written for real business decisions, checking companies, vendors, promoters and counterparties before you sign, invest, lend or onboard.
             </p>
           </Reveal>
         </div>
@@ -65,8 +65,8 @@ export default function AboutPage() {
                 <div className="mt-4 space-y-3 text-sm leading-relaxed text-slate-600">
                   <p>
                     [Founder name] founded Inamdar Business Analysis after seeing how often
-                    Indian businesses commit — signing contracts, onboarding vendors,
-                    investing or lending — on the strength of an introduction, a GST number
+                    Indian businesses commit (signing contracts, onboarding vendors,
+                    investing or lending) on the strength of an introduction, a GST number
                     and a polished website, without checking the public-record risk
                     indicators that already exist.
                   </p>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                   <p>
                     The aim is simple: turn scattered public records into a clear,
                     source-linked risk picture that a busy decision-maker can actually
-                    use — carefully, honestly, and without overclaiming.
+                    use, prepared carefully, honestly, and without overclaiming.
                   </p>
                 </div>
               </div>

@@ -13,7 +13,7 @@ import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/componen
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
 
 export const metadata: Metadata = {
-  title: "Investor Red Flag Report — Screen Before You Invest or Lend",
+  title: "Investor Red Flag Report, Screen Before You Invest or Lend",
   description:
     "Public-records based red-flag reports for angels, VCs, acquirers and lenders. Surface company, promoter, litigation and regulatory risk indicators before investing, acquiring or extending credit.",
   openGraph: {
@@ -61,7 +61,7 @@ export default function InvestorRedFlagReportPage() {
             <span className="text-gradient">term sheet or the cheque.</span>
           </>
         }
-        description="A public-records based read on a company and its promoters — built for angels, VCs, acquirers and lenders who need to see litigation, regulatory and linkage risk before they invest or lend."
+        description="A public-records based read on a company and its promoters, built for angels, VCs, acquirers and lenders who need to see litigation, regulatory and linkage risk before they invest or lend."
         bullets={["Promoter checks", "Litigation history", "Regulatory red flags"]}
       />
 
@@ -86,7 +86,7 @@ export default function InvestorRedFlagReportPage() {
             <span className="text-gradient">red-flag report</span> for your file
           </>
         }
-        description="Structured findings that sit alongside your financial and legal diligence — not a substitute for them."
+        description="Structured findings that sit alongside your financial and legal diligence, not a substitute for them."
         items={deliverables}
       />
 

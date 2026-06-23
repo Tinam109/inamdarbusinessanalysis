@@ -4,7 +4,7 @@ import { Card, IconTile } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
-/** A grid of icon feature cards — reused across sub-pages. */
+/** A grid of icon feature cards, reused across sub-pages. */
 export function FeatureGrid({
   eyebrow,
   title,

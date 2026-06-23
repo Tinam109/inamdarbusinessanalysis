@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * LogoMark — original geometric mark for Inamdar Business Analysis.
+ * LogoMark, original geometric mark for Inamdar Business Analysis.
  *
  * Concept: a shield silhouette (verification / trust / due diligence) that
  * doubles as a stack of records. Inside sit three ascending signal bars
@@ -53,7 +53,7 @@ export function LogoMark({
 }
 
 /**
- * Logo — mark + wordmark lockup, linking home.
+ * Logo, mark + wordmark lockup, linking home.
  */
 export function Logo({
   className = "",
@@ -68,7 +68,7 @@ export function Logo({
     <Link
       href="/"
       className={`group flex items-center gap-2.5 ${className}`}
-      aria-label="Inamdar Business Analysis — home"
+      aria-label="Inamdar Business Analysis, home"
     >
       <LogoMark className="h-9 w-9 transition-transform duration-300 group-hover:scale-105" />
       {showWordmark && (

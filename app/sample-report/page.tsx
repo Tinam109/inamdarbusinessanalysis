@@ -16,9 +16,9 @@ import { Button } from "@/components/ui/Button";
 import { DISCLAIMER } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Sample Report — What a Business Risk Report Looks Like",
+  title: "Sample Report, What a Business Risk Report Looks Like",
   description:
-    "An illustrative, watermarked sample of an Inamdar Business Analysis public-records risk report — identity match, litigation table, compliance indicators, director linkages and an overall risk summary, all source-linked.",
+    "An illustrative, watermarked sample of an Inamdar Business Analysis public-records risk report, identity match, litigation table, compliance indicators, director linkages and an overall risk summary, all source-linked.",
   robots: { index: false, follow: true },
 };
 
@@ -79,7 +79,7 @@ export default function SampleReportPage() {
           </Link>
           <div className="flex items-center gap-3">
             <span className="text-sm text-slate-500">
-              Illustrative sample — fictional entity
+              Illustrative sample, fictional entity
             </span>
             <Button href="/#contact" size="sm">
               Request a real report
@@ -164,7 +164,7 @@ export default function SampleReportPage() {
                 Identity matched on CIN and GSTIN; the entity is active with current filing
                 indicators and a rising employee headcount. However, a pending commercial
                 suit and a consumer dispute were matched, and a common director links the
-                entity to two other companies — one carrying its own litigation. Overall
+                entity to two other companies, one carrying its own litigation. Overall
                 risk is assessed <span className="font-medium text-amber-700">Moderate</span>;
                 the litigation and linkages warrant legal review before a high-value commitment.
               </p>
@@ -270,10 +270,10 @@ export default function SampleReportPage() {
             {/* Sources */}
             <Section icon={<Link2 className="h-4 w-4" />} title="7. Sources & date of search">
               <ul className="space-y-1.5 text-sm text-slate-500">
-                <li>• MCA / ROC master data — searched 22 Jun 2026</li>
-                <li>• GST status portal — searched 22 Jun 2026</li>
-                <li>• eCourts district & High Court services — searched 22 Jun 2026</li>
-                <li>• Regulatory order repositories — searched 22 Jun 2026</li>
+                <li>• MCA / ROC master data, searched 22 Jun 2026</li>
+                <li>• GST status portal, searched 22 Jun 2026</li>
+                <li>• eCourts district & High Court services, searched 22 Jun 2026</li>
+                <li>• Regulatory order repositories, searched 22 Jun 2026</li>
               </ul>
               <p className="mt-3 text-xs italic text-slate-400">
                 In a real report, each line links directly to the underlying source record.
