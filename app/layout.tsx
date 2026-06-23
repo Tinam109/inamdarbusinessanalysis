@@ -3,6 +3,7 @@ import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,12 +66,29 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Inamdar Business Analysis",
+    url: siteUrl,
+    description:
+      "Source-backed public records business risk reports on Indian companies, vendors, promoters and counterparties.",
+    areaServed: "IN",
+    telephone: "+91-91064-69665",
+    serviceType: "Counterparty due diligence and business risk reports",
+  };
+
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
       <body className="min-h-screen font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

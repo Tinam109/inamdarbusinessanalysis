@@ -26,6 +26,8 @@ import {
   Banknote,
   Ship,
   Handshake,
+  Clock,
+  FileSearch,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Card, IconTile } from "@/components/ui/Card";
@@ -34,6 +36,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { HeroDashboard } from "@/components/HeroDashboard";
 import { RiskSignalTabs } from "@/components/RiskSignalTabs";
+import { Faq } from "@/components/Faq";
 import { DisclaimerBlock, ContactSection } from "@/components/Sections";
 import {
   reportScope,
@@ -41,6 +44,8 @@ import {
   useCases,
   deliverables,
   pricingTiers,
+  methodology,
+  caseExamples,
 } from "@/lib/content";
 
 const scopeIcons = [
@@ -75,16 +80,25 @@ export default function HomePage() {
               <span className="text-gradient">sign, invest, lend or onboard.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
-              Source-backed public records reports for Indian companies, vendors,
-              promoters and counterparties.
+              We prepare source-linked public-record risk reports on Indian
+              companies, vendors and promoters — covering identity, filings,
+              litigation, regulatory references, insolvency indicators and
+              director linkages.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="#contact" size="lg">
                 Request a Report
                 <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button href="#report-scope" variant="secondary" size="lg">
-                View Report Scope
+              <Button href="/sample-report" variant="secondary" size="lg">
+                <FileSearch className="h-4 w-4" />
+                View Sample Report
+              </Button>
+            </div>
+            <div className="mt-3">
+              <Button href="#contact" variant="ghost" size="sm">
+                Not sure what you need? Get scope &amp; quote
+                <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500">
@@ -285,7 +299,11 @@ export default function HomePage() {
                 }
                 description="Every engagement ends in a structured PDF that any decision-maker can read in minutes — with the sources behind each finding and the date they were checked."
               />
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href="/sample-report" variant="secondary">
+                  <FileSearch className="h-4 w-4" />
+                  View Sample Report
+                </Button>
                 <Button href="#pricing" variant="ghost">
                   See pricing approach
                   <ArrowRight className="h-4 w-4" />
@@ -311,14 +329,80 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============ WHY TRUST US / METHODOLOGY ============ */}
+      <section id="how-we-work" className="section-pad scroll-mt-20">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              eyebrow="How we work"
+              title="Why teams trust the findings"
+              description="Every report is built the same disciplined way — anchored to verifiable identifiers, drawn from public sources, and reported with the source and date behind each finding."
+              align="center"
+            />
+          </Reveal>
+          <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {methodology.map((m, i) => {
+              const Icon = [Fingerprint, FileSearch, Link2, ShieldAlert][i] ?? FileSearch;
+              return (
+                <RevealItem key={m.title}>
+                  <Card className="h-full">
+                    <IconTile>
+                      <Icon className="h-5 w-5" />
+                    </IconTile>
+                    <h3 className="mt-4 font-display text-base font-semibold text-brand">
+                      {m.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-500">
+                      {m.desc}
+                    </p>
+                  </Card>
+                </RevealItem>
+              );
+            })}
+          </RevealGroup>
+
+          {/* Illustrative case examples */}
+          <Reveal>
+            <div className="mt-16 flex items-end justify-between">
+              <h3 className="font-display text-xl font-semibold text-brand">
+                What a check can surface
+              </h3>
+              <span className="text-xs uppercase tracking-wider text-slate-400">
+                Illustrative examples
+              </span>
+            </div>
+          </Reveal>
+          <RevealGroup className="mt-6 grid gap-4 lg:grid-cols-3">
+            {caseExamples.map((c) => (
+              <RevealItem key={c.title}>
+                <div className="h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+                  <Badge tone="accent">{c.tag}</Badge>
+                  <h4 className="mt-4 font-display text-base font-semibold text-brand">
+                    {c.title}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                    {c.desc}
+                  </p>
+                </div>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+          <Reveal>
+            <p className="mt-6 text-center text-xs text-slate-400">
+              Examples are illustrative and anonymised — not specific clients or entities.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ============ PRICING ============ */}
       <section id="pricing" className="section-pad scroll-mt-20 bg-slate-50">
         <div className="container-x">
           <Reveal>
             <SectionHeading
               eyebrow="Pricing"
-              title="Scope-based, not one-size-fits-all"
-              description="Pricing depends on scope, number of entities and turnaround time. Start with the tier closest to your decision and we'll tailor it."
+              title="Choose the depth of check based on the decision"
+              description="A quick vendor status check may only need identity, MCA and GST indicators. An investment or lending decision may need litigation, regulatory, insolvency and promoter-linkage review. Pricing depends on scope, number of entities and turnaround."
               align="center"
             />
           </Reveal>
@@ -353,6 +437,27 @@ export default function HomePage() {
                   >
                     {tier.tagline}
                   </p>
+                  <div className="mt-4">
+                    <span
+                      className={`font-display text-xl font-semibold ${
+                        tier.featured ? "text-white" : "text-brand"
+                      }`}
+                    >
+                      {tier.priceAnchor}
+                    </span>
+                  </div>
+                  <div
+                    className={`mt-3 inline-flex items-center gap-1.5 text-xs ${
+                      tier.featured ? "text-brand-100" : "text-slate-500"
+                    }`}
+                  >
+                    <Clock
+                      className={`h-3.5 w-3.5 ${
+                        tier.featured ? "text-accent-400" : "text-accent-600"
+                      }`}
+                    />
+                    {tier.turnaround}
+                  </div>
                   <div
                     className={`my-5 h-px w-full ${
                       tier.featured ? "bg-white/15" : "bg-slate-200"
@@ -393,6 +498,21 @@ export default function HomePage() {
               Pricing depends on scope, number of entities and turnaround time.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ============ FAQ ============ */}
+      <section id="faq" className="section-pad scroll-mt-20">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              eyebrow="FAQ"
+              title="Questions, answered"
+              description="The things buyers usually want to know before they request a report."
+              align="center"
+            />
+          </Reveal>
+          <Faq />
         </div>
       </section>
 

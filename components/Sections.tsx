@@ -37,14 +37,14 @@ export function ContactSection() {
       <div className="container-x">
         <Reveal>
           <SectionHeading
-            eyebrow="Request a Report"
+            eyebrow="Get scope & quote"
             title={
               <>
-                Book a quick call to{" "}
-                <span className="text-gradient">get started</span>
+                Share the entity.{" "}
+                <span className="text-gradient">We&apos;ll suggest the right scope.</span>
               </>
             }
-            description="Tell us who you need checked over a 15-minute call, or reach out directly on WhatsApp. We'll confirm scope, turnaround and next steps."
+            description="Not sure which check you need? Tell us the entity and the decision you're making over a 15-minute call, or message us on WhatsApp. We'll confirm scope, turnaround and a quote — no obligation."
           />
           <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
             {[
