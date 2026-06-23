@@ -140,8 +140,7 @@ export const pricingTiers: {
   {
     name: "Basic Check",
     tagline: "A fast identity and status read on a single entity.",
-    // TODO: replace with the agreed starting figure, e.g. "From ₹2,000".
-    priceAnchor: "Pricing on request",
+    priceAnchor: "From ₹1,500",
     turnaround: "Usually 1–2 working days",
     features: [
       "Identity & registration match",
@@ -153,8 +152,7 @@ export const pricingTiers: {
   {
     name: "Standard Report",
     tagline: "A rounded public-records risk picture for most decisions.",
-    // TODO: replace with the agreed starting figure, e.g. "From ₹X".
-    priceAnchor: "Pricing on request",
+    priceAnchor: "From ₹3,000",
     turnaround: "Usually 3–5 working days",
     features: [
       "Everything in Basic Check",
@@ -167,7 +165,7 @@ export const pricingTiers: {
   {
     name: "Enhanced Report",
     tagline: "Deeper diligence across linkages and regulatory records.",
-    priceAnchor: "Custom quote",
+    priceAnchor: "₹5,000 – ₹7,000",
     turnaround: "Timeline depends on scope",
     features: [
       "Everything in Standard Report",
