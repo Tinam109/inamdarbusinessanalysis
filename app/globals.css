@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-slate-200 antialiased;
+    background-image:
+      radial-gradient(70% 50% at 50% -10%, rgba(34, 211, 238, 0.08) 0%, transparent 60%),
+      radial-gradient(50% 40% at 90% 10%, rgba(16, 185, 129, 0.06) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-cyan/30 text-white;
+  }
+}
+
+@layer components {
+  /* Glassmorphism surface */
+  .glass {
+    @apply border border-white/10 bg-white/[0.03] backdrop-blur-xl;
+  }
+
+  .glass-strong {
+    @apply border border-white/10 bg-ink-800/60 backdrop-blur-2xl;
+  }
+
+  .section-pad {
+    @apply px-5 py-20 sm:px-8 md:py-28;
+  }
+
+  .container-x {
+    @apply mx-auto w-full max-w-7xl;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-soft via-emerald-soft to-gold-soft bg-clip-text text-transparent;
+  }
+
+  .text-gradient-cool {
+    @apply bg-gradient-to-r from-white via-cyan-soft to-emerald-soft bg-clip-text text-transparent;
+  }
+
+  /* Hairline divider */
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #05080f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2b4a;
+  border-radius: 9999px;
+  border: 2px solid #05080f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3a5e;
+}
