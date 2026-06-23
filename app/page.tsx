@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   ArrowRight,
   Building2,
@@ -9,7 +8,6 @@ import {
   Landmark,
   Gavel,
   ShieldAlert,
-  AlertTriangle,
   Network,
   FileWarning,
   Eye,
@@ -32,14 +30,11 @@ import {
 import { Button } from "@/components/ui/Button";
 import { Card, IconTile } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { SectionHeading, Eyebrow } from "@/components/ui/SectionHeading";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { HeroDashboard } from "@/components/HeroDashboard";
 import { RiskSignalTabs } from "@/components/RiskSignalTabs";
-import {
-  DisclaimerBlock,
-  ContactSection,
-} from "@/components/Sections";
+import { DisclaimerBlock, ContactSection } from "@/components/Sections";
 import {
   reportScope,
   audiences,
@@ -69,17 +64,17 @@ export default function HomePage() {
       {/* ============ HERO ============ */}
       <section className="relative overflow-hidden px-5 pb-16 pt-32 sm:px-8 sm:pt-40">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-faint [mask-image:radial-gradient(70%_55%_at_50%_0%,black,transparent)]" />
-        <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-cyan/10 blur-[120px]" />
+        <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-accent-100/40 blur-[120px]" />
         <div className="container-x grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal>
-            <Badge tone="cyan" dot>
+            <Badge tone="accent" dot>
               Public-records based risk intelligence
             </Badge>
-            <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-brand sm:text-5xl lg:text-6xl">
               Know who you are dealing with before you{" "}
               <span className="text-gradient">sign, invest, lend or onboard.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
               Source-backed public records reports for Indian companies, vendors,
               promoters and counterparties.
             </p>
@@ -96,7 +91,7 @@ export default function HomePage() {
               {["Source-linked findings", "Clear date of search", "Neutral & factual"].map(
                 (t) => (
                   <span key={t} className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-emerald-soft" />
+                    <Check className="h-4 w-4 text-accent-600" />
                     {t}
                   </span>
                 ),
@@ -142,11 +137,13 @@ export default function HomePage() {
               ].map((item) => (
                 <RevealItem key={item.t}>
                   <Card className="h-full">
-                    <IconTile className="text-gold-soft">{item.icon}</IconTile>
-                    <h3 className="mt-4 font-display text-base font-semibold text-white">
+                    <IconTile className="border-amber-200 bg-amber-50 text-amber-700">
+                      {item.icon}
+                    </IconTile>
+                    <h3 className="mt-4 font-display text-base font-semibold text-brand">
                       {item.t}
                     </h3>
-                    <p className="mt-1.5 text-sm text-slate-400">{item.d}</p>
+                    <p className="mt-1.5 text-sm text-slate-500">{item.d}</p>
                   </Card>
                 </RevealItem>
               ))}
@@ -175,10 +172,10 @@ export default function HomePage() {
                     <IconTile>
                       <Icon className="h-5 w-5" />
                     </IconTile>
-                    <h3 className="mt-4 font-display text-base font-semibold text-white">
+                    <h3 className="mt-4 font-display text-base font-semibold text-brand">
                       {item.title}
                     </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-slate-400">
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-500">
                       {item.desc}
                     </p>
                   </Card>
@@ -190,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* ============ INTERACTIVE RISK SIGNALS ============ */}
-      <section id="risk-signals" className="section-pad scroll-mt-20">
+      <section id="risk-signals" className="section-pad scroll-mt-20 bg-slate-50">
         <div className="container-x">
           <Reveal>
             <SectionHeading
@@ -225,11 +222,11 @@ export default function HomePage() {
                       <IconTile>
                         <Icon className="h-5 w-5" />
                       </IconTile>
-                      <h3 className="font-display text-base font-semibold text-white">
+                      <h3 className="font-display text-base font-semibold text-brand">
                         {a.title}
                       </h3>
                     </div>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                    <p className="mt-3 text-sm leading-relaxed text-slate-500">
                       {a.desc}
                     </p>
                   </Card>
@@ -241,7 +238,7 @@ export default function HomePage() {
       </section>
 
       {/* ============ USE CASES ============ */}
-      <section id="use-cases" className="section-pad scroll-mt-20">
+      <section id="use-cases" className="section-pad scroll-mt-20 bg-slate-50">
         <div className="container-x">
           <Reveal>
             <SectionHeading
@@ -259,10 +256,10 @@ export default function HomePage() {
                     <IconTile>
                       <Icon className="h-5 w-5" />
                     </IconTile>
-                    <h3 className="mt-4 font-display text-base font-semibold text-white">
+                    <h3 className="mt-4 font-display text-base font-semibold text-brand">
                       {u.title}
                     </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-slate-400">
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-500">
                       {u.desc}
                     </p>
                   </Card>
@@ -300,11 +297,11 @@ export default function HomePage() {
                 const Icon = deliverableIcons[i] ?? FileText;
                 return (
                   <RevealItem key={d}>
-                    <div className="glass flex items-center gap-3 rounded-xl px-4 py-3.5">
-                      <span className="flex h-9 w-9 flex-none items-center justify-center rounded-lg border border-white/10 bg-white/5 text-emerald-soft">
+                    <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3.5 shadow-soft">
+                      <span className="flex h-9 w-9 flex-none items-center justify-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
                         <Icon className="h-4 w-4" />
                       </span>
-                      <span className="text-sm font-medium text-slate-200">{d}</span>
+                      <span className="text-sm font-medium text-slate-700">{d}</span>
                     </div>
                   </RevealItem>
                 );
@@ -315,7 +312,7 @@ export default function HomePage() {
       </section>
 
       {/* ============ PRICING ============ */}
-      <section id="pricing" className="section-pad scroll-mt-20">
+      <section id="pricing" className="section-pad scroll-mt-20 bg-slate-50">
         <div className="container-x">
           <Reveal>
             <SectionHeading
@@ -329,30 +326,51 @@ export default function HomePage() {
             {pricingTiers.map((tier) => (
               <RevealItem key={tier.name}>
                 <div
-                  className={`relative flex h-full flex-col rounded-2xl border p-6 shadow-glass transition-all duration-300 hover:-translate-y-1 ${
+                  className={`relative flex h-full flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 ${
                     tier.featured
-                      ? "border-cyan/40 bg-gradient-to-b from-cyan/[0.08] to-white/[0.02]"
-                      : "glass"
+                      ? "border-brand bg-brand text-white shadow-lift"
+                      : "border-slate-200 bg-white shadow-soft hover:shadow-lift"
                   }`}
                 >
                   {tier.featured && (
                     <span className="absolute -top-3 left-6">
-                      <Badge tone="cyan" dot>
+                      <Badge tone="accent" dot>
                         Most popular
                       </Badge>
                     </span>
                   )}
-                  <h3 className="font-display text-lg font-semibold text-white">
+                  <h3
+                    className={`font-display text-lg font-semibold ${
+                      tier.featured ? "text-white" : "text-brand"
+                    }`}
+                  >
                     {tier.name}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  <p
+                    className={`mt-2 text-sm leading-relaxed ${
+                      tier.featured ? "text-brand-200" : "text-slate-500"
+                    }`}
+                  >
                     {tier.tagline}
                   </p>
-                  <div className="my-5 hairline" />
+                  <div
+                    className={`my-5 h-px w-full ${
+                      tier.featured ? "bg-white/15" : "bg-slate-200"
+                    }`}
+                  />
                   <ul className="flex-1 space-y-3">
                     {tier.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm text-slate-300">
-                        <Check className="mt-0.5 h-4 w-4 flex-none text-emerald-soft" />
+                      <li
+                        key={f}
+                        className={`flex items-start gap-2.5 text-sm ${
+                          tier.featured ? "text-brand-100" : "text-slate-600"
+                        }`}
+                      >
+                        <Check
+                          className={`mt-0.5 h-4 w-4 flex-none ${
+                            tier.featured ? "text-accent-400" : "text-accent-600"
+                          }`}
+                        />
                         {f}
                       </li>
                     ))}
@@ -360,8 +378,8 @@ export default function HomePage() {
                   <div className="mt-6">
                     <Button
                       href="#contact"
-                      variant={tier.featured ? "primary" : "secondary"}
-                      className="w-full"
+                      variant={tier.featured ? "secondary" : "primary"}
+                      className={tier.featured ? "w-full" : "w-full"}
                     >
                       Request a Report
                     </Button>

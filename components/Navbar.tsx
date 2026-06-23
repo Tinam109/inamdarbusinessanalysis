@@ -45,7 +45,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-white/10 bg-ink-950/80 backdrop-blur-xl"
+          ? "border-b border-slate-200 bg-white/85 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent",
       )}
     >
@@ -59,18 +59,18 @@ export function Navbar() {
             onMouseEnter={() => setReportsOpen(true)}
             onMouseLeave={() => setReportsOpen(false)}
           >
-            <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm text-slate-300 transition-colors hover:text-white">
+            <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors hover:text-brand">
               Reports
               <ChevronDown className="h-3.5 w-3.5" />
             </button>
             {reportsOpen && (
               <div className="absolute left-0 top-full w-64 pt-2">
-                <div className="glass-strong overflow-hidden rounded-xl p-2 shadow-glass">
+                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-lift">
                   {reportPages.map((p) => (
                     <Link
                       key={p.href}
                       href={p.href}
-                      className="block rounded-lg px-3 py-2.5 text-sm text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                      className="block rounded-lg px-3 py-2.5 text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-brand"
                     >
                       {p.label}
                     </Link>
@@ -83,7 +83,7 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="rounded-lg px-3 py-2 text-sm text-slate-300 transition-colors hover:text-white"
+              className="rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors hover:text-brand"
             >
               {l.label}
             </Link>
@@ -98,7 +98,7 @@ export function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="rounded-lg p-2 text-slate-200 lg:hidden"
+          className="rounded-lg p-2 text-brand lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -109,13 +109,13 @@ export function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="lg:hidden">
-          <div className="container-x flex flex-col gap-1 border-t border-white/10 bg-ink-950/95 px-5 py-4 backdrop-blur-xl sm:px-8">
+          <div className="container-x flex flex-col gap-1 border-t border-slate-200 bg-white px-5 py-4 sm:px-8">
             {[...reportPages, ...navLinks].map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-sm text-slate-200 transition-colors hover:bg-white/5"
+                className="rounded-lg px-3 py-3 text-sm text-slate-700 transition-colors hover:bg-slate-50"
               >
                 {l.label}
               </Link>

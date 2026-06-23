@@ -16,8 +16,8 @@ const purposes = [
 ];
 
 const inputClass =
-  "w-full rounded-xl border border-white/10 bg-ink-900/60 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-colors focus:border-cyan/50 focus:bg-ink-900";
-const labelClass = "mb-1.5 block text-xs font-medium text-slate-300";
+  "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-brand placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:ring-2 focus:ring-accent-100";
+const labelClass = "mb-1.5 block text-xs font-medium text-slate-600";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -43,14 +43,14 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="glass flex flex-col items-center gap-4 rounded-2xl p-10 text-center">
-        <div className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald/30 bg-emerald/10">
-          <CheckCircle2 className="h-7 w-7 text-emerald-soft" />
+      <div className="card flex flex-col items-center gap-4 p-10 text-center">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full border border-accent-100 bg-accent-50">
+          <CheckCircle2 className="h-7 w-7 text-accent-600" />
         </div>
-        <h3 className="font-display text-xl font-semibold text-white">
+        <h3 className="font-display text-xl font-semibold text-brand">
           Enquiry received
         </h3>
-        <p className="max-w-md text-sm leading-relaxed text-slate-400">
+        <p className="max-w-md text-sm leading-relaxed text-slate-500">
           Thank you. This is a demo confirmation — once a form handler is
           connected, your enquiry will be routed to the team and you&apos;ll get
           a reply with scope and turnaround.
@@ -63,7 +63,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="card p-6 sm:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className={labelClass}>
@@ -104,7 +104,7 @@ export function ContactForm() {
               Select a purpose
             </option>
             {purposes.map((p) => (
-              <option key={p} value={p} className="bg-ink-900">
+              <option key={p} value={p}>
                 {p}
               </option>
             ))}

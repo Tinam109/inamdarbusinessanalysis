@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   html {
@@ -12,26 +12,21 @@
   }
 
   body {
-    @apply bg-ink-950 text-slate-200 antialiased;
+    @apply bg-white text-slate-600 antialiased;
     background-image:
-      radial-gradient(70% 50% at 50% -10%, rgba(34, 211, 238, 0.08) 0%, transparent 60%),
-      radial-gradient(50% 40% at 90% 10%, rgba(16, 185, 129, 0.06) 0%, transparent 60%);
-    background-attachment: fixed;
+      radial-gradient(60% 40% at 50% -5%, rgba(5, 150, 105, 0.05) 0%, transparent 55%),
+      radial-gradient(45% 35% at 100% 0%, rgba(21, 36, 77, 0.04) 0%, transparent 60%);
   }
 
   ::selection {
-    @apply bg-cyan/30 text-white;
+    @apply bg-accent/20 text-brand;
   }
 }
 
 @layer components {
-  /* Glassmorphism surface */
-  .glass {
-    @apply border border-white/10 bg-white/[0.03] backdrop-blur-xl;
-  }
-
-  .glass-strong {
-    @apply border border-white/10 bg-ink-800/60 backdrop-blur-2xl;
+  /* Light surface card */
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-soft;
   }
 
   .section-pad {
@@ -42,34 +37,30 @@
     @apply mx-auto w-full max-w-7xl;
   }
 
-  /* Gradient text */
+  /* Restrained two-tone emphasis: navy → emerald */
   .text-gradient {
-    @apply bg-gradient-to-r from-cyan-soft via-emerald-soft to-gold-soft bg-clip-text text-transparent;
-  }
-
-  .text-gradient-cool {
-    @apply bg-gradient-to-r from-white via-cyan-soft to-emerald-soft bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand to-accent-600 bg-clip-text text-transparent;
   }
 
   /* Hairline divider */
   .hairline {
-    @apply h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
+    @apply h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent;
   }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
 }
 ::-webkit-scrollbar-track {
-  background: #05080f;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2b4a;
+  background: #cbd5e1;
   border-radius: 9999px;
-  border: 2px solid #05080f;
+  border: 3px solid #f1f5f9;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a3a5e;
+  background: #94a3b8;
 }

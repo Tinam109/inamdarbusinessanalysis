@@ -14,9 +14,9 @@ export function Card({
   return (
     <Tag
       className={cn(
-        "glass rounded-2xl p-6 shadow-glass",
+        "card p-6",
         hover &&
-          "transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-glow",
+          "transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lift",
         className,
       )}
     >
@@ -36,7 +36,7 @@ export function IconTile({
   return (
     <div
       className={cn(
-        "inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.08] to-transparent text-cyan-soft",
+        "inline-flex h-11 w-11 items-center justify-center rounded-xl border border-accent-100 bg-accent-50 text-accent-700",
         className,
       )}
     >

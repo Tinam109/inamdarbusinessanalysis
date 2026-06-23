@@ -6,9 +6,8 @@ import Link from "next/link";
  * Concept: a shield silhouette (verification / trust / due diligence) that
  * doubles as a stack of records. Inside sit three ascending signal bars
  * (structured data / business intelligence) topped by a single highlighted
- * signal node (a risk indicator). A subtle check notch at the base reads as
- * "verified". No scales, gavels or court imagery — this is a risk-intelligence
- * mark, not a law-firm mark.
+ * signal node (a risk indicator). Restrained two-colour palette: deep navy
+ * with a single emerald accent. No scales, gavels or court imagery.
  */
 export function LogoMark({
   className = "h-9 w-9",
@@ -27,17 +26,12 @@ export function LogoMark({
     >
       <defs>
         <linearGradient id={`${gradientId}-bg`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#0f1626" />
-          <stop offset="100%" stopColor="#05080f" />
+          <stop offset="0%" stopColor="#1c2c4b" />
+          <stop offset="100%" stopColor="#0b1428" />
         </linearGradient>
         <linearGradient id={`${gradientId}-bar`} x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0%" stopColor="#10b981" />
-          <stop offset="100%" stopColor="#22d3ee" />
-        </linearGradient>
-        <linearGradient id={`${gradientId}-edge`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#22d3ee" />
-          <stop offset="55%" stopColor="#10b981" />
-          <stop offset="100%" stopColor="#d4a13c" />
+          <stop offset="0%" stopColor="#059669" />
+          <stop offset="100%" stopColor="#34d399" />
         </linearGradient>
       </defs>
 
@@ -45,30 +39,15 @@ export function LogoMark({
       <path
         d="M24 3.5l16 5.2v12.2c0 11.2-6.9 19.6-16 23.6C14.9 40.5 8 32.1 8 20.9V8.7L24 3.5z"
         fill={`url(#${gradientId}-bg)`}
-        stroke={`url(#${gradientId}-edge)`}
-        strokeWidth="1.6"
-        strokeLinejoin="round"
       />
 
       {/* Ascending signal bars (structured data / intelligence) */}
-      <rect x="15" y="26" width="4.2" height="8" rx="1.4" fill="#67e8f9" opacity="0.75" />
-      <rect x="21.9" y="22" width="4.2" height="12" rx="1.4" fill={`url(#${gradientId}-bar)`} />
-      <rect x="28.8" y="18" width="4.2" height="16" rx="1.4" fill="#34d399" opacity="0.9" />
+      <rect x="15" y="26" width="4.2" height="8" rx="1.4" fill="#ffffff" opacity="0.45" />
+      <rect x="21.9" y="22" width="4.2" height="12" rx="1.4" fill="#ffffff" opacity="0.7" />
+      <rect x="28.8" y="18" width="4.2" height="16" rx="1.4" fill={`url(#${gradientId}-bar)`} />
 
       {/* Highlighted risk-signal node above the tallest bar */}
-      <circle cx="30.9" cy="13.2" r="2.6" fill="#d4a13c" />
-      <circle cx="30.9" cy="13.2" r="2.6" fill="none" stroke="#e8c477" strokeWidth="1" opacity="0.6" />
-
-      {/* Verified check notch at the base */}
-      <path
-        d="M19 18.6l3.1 3.1 6.2-6.4"
-        fill="none"
-        stroke="#ffffff"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity="0.0"
-      />
+      <circle cx="30.9" cy="13.2" r="2.7" fill="#34d399" />
     </svg>
   );
 }
@@ -95,15 +74,15 @@ export function Logo({
       {showWordmark && (
         <span className="flex flex-col leading-none">
           {compact ? (
-            <span className="font-display text-base font-semibold tracking-tight text-white">
+            <span className="font-display text-base font-semibold tracking-tight text-brand">
               Inamdar
             </span>
           ) : (
             <>
-              <span className="font-display text-[15px] font-semibold tracking-tight text-white">
+              <span className="font-display text-[15px] font-semibold tracking-tight text-brand">
                 Inamdar Business Analysis
               </span>
-              <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.22em] text-cyan-soft/70">
+              <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.22em] text-accent-600">
                 Risk Intelligence
               </span>
             </>

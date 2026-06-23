@@ -33,39 +33,39 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink-950/60">
+    <footer className="border-t border-slate-200 bg-slate-50">
       <div className="container-x px-5 py-16 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2.5">
               <LogoMark className="h-9 w-9" gradientId="iba-footer" />
-              <span className="font-display text-[15px] font-semibold tracking-tight text-white">
+              <span className="font-display text-[15px] font-semibold tracking-tight text-brand">
                 Inamdar Business Analysis
               </span>
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Source-backed, public-records based business risk reports on Indian
               companies, vendors, promoters and counterparties.
             </p>
-            <div className="mt-5 space-y-2 text-sm text-slate-400">
+            <div className="mt-5 space-y-2 text-sm text-slate-500">
               {/* TODO: replace placeholders with real contact details */}
               <a
                 href="mailto:hello@inamdarbusinessanalysis.in"
-                className="flex items-center gap-2 transition-colors hover:text-white"
+                className="flex items-center gap-2 transition-colors hover:text-brand"
               >
-                <Mail className="h-4 w-4 text-cyan-soft" />
+                <Mail className="h-4 w-4 text-accent-600" />
                 hello@inamdarbusinessanalysis.in
               </a>
               <a
                 href="#contact"
-                className="flex items-center gap-2 transition-colors hover:text-white"
+                className="flex items-center gap-2 transition-colors hover:text-brand"
               >
-                <MessageCircle className="h-4 w-4 text-emerald-soft" />
+                <MessageCircle className="h-4 w-4 text-accent-600" />
                 WhatsApp enquiries
               </a>
               <span className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-gold-soft" />
+                <MapPin className="h-4 w-4 text-brand-400" />
                 India
               </span>
             </div>
@@ -73,13 +73,13 @@ export function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="text-sm font-semibold text-white">{col.title}</h3>
+              <h3 className="text-sm font-semibold text-brand">{col.title}</h3>
               <ul className="mt-4 space-y-3">
                 {col.links.map((l) => (
                   <li key={l.href}>
                     <Link
                       href={l.href}
-                      className="text-sm text-slate-400 transition-colors hover:text-white"
+                      className="text-sm text-slate-500 transition-colors hover:text-brand"
                     >
                       {l.label}
                     </Link>
@@ -106,7 +106,7 @@ export function Footer() {
             © {new Date().getFullYear()} Inamdar Business Analysis. All rights
             reserved.
           </p>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-400">
             Risk intelligence · Counterparty due diligence · India
           </p>
         </div>
