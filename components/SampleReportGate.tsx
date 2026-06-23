@@ -21,19 +21,42 @@ function triggerDownload() {
 
 export function SampleReportGate() {
   const [done, setDone] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError("");
+    setIsSubmitting(true);
 
-    // TODO: Connect a lead handler so these details reach you (the sample only
-    // downloads on the client right now, the form data is not stored yet).
-    // Options: Formspree (POST to https://formspree.io/f/<id>), a Resend-backed
-    // /api/lead route, or Google Sheets via Apps Script.
-    //   const data = new FormData(e.currentTarget);
-    //   await fetch("https://formspree.io/f/XXXX", { method:"POST", body:data, headers:{Accept:"application/json"} });
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") || ""),
+      email: String(formData.get("email") || ""),
+      phone: String(formData.get("phone") || ""),
+      source: "sample-report",
+    };
 
-    setDone(true);
-    triggerDownload();
+    try {
+      const response = await fetch("/api/sample-report-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        throw new Error(body?.error || "Could not save your details. Please try again.");
+      }
+
+      setDone(true);
+      triggerDownload();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not save your details. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (done) {
@@ -94,9 +117,15 @@ export function SampleReportGate() {
         </div>
       </div>
 
-      <Button type="submit" size="lg" className="mt-6 w-full">
+      {error && (
+        <p className="mt-4 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm text-red-700">
+          {error}
+        </p>
+      )}
+
+      <Button type="submit" size="lg" className="mt-6 w-full" disabled={isSubmitting}>
         <Download className="h-4 w-4" />
-        Download the sample report
+        {isSubmitting ? "Saving details..." : "Download the sample report"}
       </Button>
 
       <p className="mt-4 flex items-center justify-center gap-1.5 text-xs text-slate-400">
