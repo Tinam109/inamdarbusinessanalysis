@@ -12,28 +12,14 @@ Submitted At | Name | Email | Phone | Source | Page | User Agent
 
 ## 2. Add Apps Script
 
-In the Sheet, open `Extensions -> Apps Script`, paste:
+In the Sheet, open `Extensions -> Apps Script`, paste the full contents of:
 
-```javascript
-function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var data = JSON.parse(e.postData.contents);
-
-  sheet.appendRow([
-    data.submittedAt || new Date().toISOString(),
-    data.name || "",
-    data.email || "",
-    data.phone || "",
-    data.source || "",
-    data.page || "",
-    data.userAgent || ""
-  ]);
-
-  return ContentService
-    .createTextOutput(JSON.stringify({ ok: true }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
+```text
+apps-script/google-sheets-lead-capture.gs
 ```
+
+The script creates a tab called `Sample Report Leads`, adds headers if needed,
+and appends every `/sample-report` download request as a new row.
 
 ## 3. Deploy the Script
 
