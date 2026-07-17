@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, FileSearch } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
@@ -81,6 +81,12 @@ export function Navbar() {
               </div>
             )}
           </div>
+          <Link
+            href="/resources"
+            className="rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors hover:text-brand"
+          >
+            Resources
+          </Link>
           {navLinks.map((l) => (
             <Link
               key={l.href}
@@ -92,7 +98,11 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2.5 lg:flex">
+          <Button href="/sample-report" variant="accent" size="sm">
+            <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+            View Sample PDF
+          </Button>
           <Button href="/#contact" size="sm">
             Request a Report
           </Button>
@@ -112,7 +122,11 @@ export function Navbar() {
       {open && (
         <div className="lg:hidden">
           <div className="container-x flex flex-col gap-1 border-t border-slate-200 bg-white px-5 py-4 sm:px-8">
-            {[...reportPages, ...navLinks].map((l) => (
+            {[
+              ...reportPages,
+              { label: "Resources", href: "/resources" },
+              ...navLinks,
+            ].map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
@@ -122,7 +136,11 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <div className="pt-2">
+            <div className="flex flex-col gap-2 pt-3">
+              <Button href="/sample-report" variant="accent" className="w-full" onClick={() => setOpen(false)}>
+                <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                View Sample Report
+              </Button>
               <Button href="/#contact" className="w-full" onClick={() => setOpen(false)}>
                 Request a Report
               </Button>

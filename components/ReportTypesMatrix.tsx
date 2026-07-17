@@ -1,4 +1,4 @@
-import { Check, Minus } from "lucide-react";
+import { Check, Minus, FileSearch } from "lucide-react";
 import { reportTypes, coverageMatrix } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
 
@@ -80,9 +80,15 @@ export function ReportTypesMatrix() {
           </tbody>
         </table>
       </div>
-      <p className="border-t border-slate-100 px-4 py-3 text-xs text-slate-400">
-        “Basic” = included where relevant or in summary form. Coverage depends on scope, entity type and public-record availability.
-      </p>
+      <div className="flex flex-col gap-3 border-t border-slate-100 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs text-slate-400 leading-normal">
+          “Basic” = included where relevant or in summary form. Coverage depends on scope, entity type and public-record availability.
+        </p>
+        <Button href="/sample-report" variant="accent" size="sm" className="self-start sm:self-auto shrink-0">
+          <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+          View Sample Report (PDF)
+        </Button>
+      </div>
     </div>
   );
 }

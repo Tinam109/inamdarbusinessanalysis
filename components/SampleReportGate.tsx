@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 const PDF_URL = "/inamdar-sample-report.pdf";
 
 const inputClass =
-  "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-brand placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:ring-2 focus:ring-accent-100";
+  "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base lg:text-sm text-brand placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:ring-2 focus:ring-accent-100";
 const labelClass = "mb-1.5 block text-xs font-medium text-slate-600";
 
 function triggerDownload() {
@@ -84,7 +84,7 @@ export function SampleReportGate() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="card p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="card p-5 sm:p-8">
       <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent-700">
         <FileText className="h-4 w-4" />
         Free sample report
@@ -101,19 +101,46 @@ export function SampleReportGate() {
           <label htmlFor="name" className={labelClass}>
             Name
           </label>
-          <input id="name" name="name" required className={inputClass} placeholder="Your full name" />
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            className={inputClass}
+            placeholder="Your full name"
+            autoComplete="name"
+            enterKeyHint="next"
+          />
         </div>
         <div>
           <label htmlFor="email" className={labelClass}>
             Email
           </label>
-          <input id="email" name="email" type="email" required className={inputClass} placeholder="you@company.com" />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            className={inputClass}
+            placeholder="you@company.com"
+            autoComplete="email"
+            enterKeyHint="next"
+          />
         </div>
         <div>
           <label htmlFor="phone" className={labelClass}>
             Phone / WhatsApp
           </label>
-          <input id="phone" name="phone" required className={inputClass} placeholder="+91 ..." />
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            className={inputClass}
+            placeholder="+91 ..."
+            autoComplete="tel"
+            enterKeyHint="done"
+          />
         </div>
       </div>
 

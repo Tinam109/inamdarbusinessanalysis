@@ -24,16 +24,16 @@ const config: Config = {
           900: "#131f37",
           950: "#0b1428",
         },
-        // Single accent — emerald. Used sparingly for CTAs and highlights.
+        // Single accent — pastel blue. Used sparingly for CTAs and highlights.
         accent: {
-          DEFAULT: "#059669",
-          50: "#ecfdf5",
-          100: "#d1fae5",
-          200: "#a7f3d0",
-          400: "#34d399",
-          500: "#10b981",
-          600: "#059669",
-          700: "#047857",
+          DEFAULT: "#4a85e2",
+          50: "#f0f7ff",
+          100: "#e0effe",
+          200: "#c7dffe",
+          400: "#93bdfd",
+          500: "#609afa",
+          600: "#4a85e2",
+          700: "#356cc5",
         },
       },
       fontFamily: {

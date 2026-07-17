@@ -93,8 +93,8 @@ export default function HomePage() {
                 Request a Report
                 <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button href="/sample-report" variant="secondary" size="lg">
-                <FileSearch className="h-4 w-4" />
+              <Button href="/sample-report" variant="accent" size="lg">
+                <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
                 View Sample Report
               </Button>
             </div>
@@ -299,8 +299,8 @@ export default function HomePage() {
                 description="Every engagement ends in a structured PDF that any decision-maker can read in minutes, with the sources behind each finding and the date they were checked."
               />
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="/sample-report" variant="secondary">
-                  <FileSearch className="h-4 w-4" />
+                <Button href="/sample-report" variant="accent">
+                  <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
                   View Sample Report
                 </Button>
                 <Button href="#pricing" variant="ghost">

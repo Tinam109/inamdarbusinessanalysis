@@ -42,7 +42,7 @@ export default function SampleReportPage() {
       <section className="relative overflow-hidden px-5 pb-12 pt-32 sm:px-8 sm:pt-40">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-faint [mask-image:radial-gradient(60%_50%_at_50%_0%,black,transparent)]" />
         <div className="pointer-events-none absolute -top-32 left-1/2 -z-10 h-[360px] w-[700px] -translate-x-1/2 rounded-full bg-accent-100/40 blur-[120px]" />
-        <div className="container-x grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="container-x grid items-start gap-8 lg:gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           {/* Left: pitch + preview */}
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-700">
@@ -77,7 +77,7 @@ export default function SampleReportPage() {
           {/* Right: cover preview + gate form */}
           <Reveal delayIndex={1}>
             <div className="space-y-6">
-              <div className="relative mx-auto w-full max-w-[300px]">
+              <div className="relative mx-auto w-full max-w-[200px] sm:max-w-[300px]">
                 <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-accent-100/50 to-brand-50/40 blur-2xl" />
                 <Image
                   src="/sample-report-cover.png"

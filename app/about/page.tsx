@@ -53,9 +53,9 @@ export default function AboutPage() {
                   <LogoMark className="h-16 w-16" gradientId="iba-about" />
                 </div>
                 <div className="mt-4 font-display text-lg font-semibold text-brand">
-                  [Founder name]
+                  Tirth Inamdar
                 </div>
-                <div className="text-sm text-slate-500">[Role / title]</div>
+                <div className="text-sm text-slate-500">Founder &amp; Corporate Lawyer</div>
               </div>
               <div>
                 <SectionHeading
@@ -64,21 +64,22 @@ export default function AboutPage() {
                 />
                 <div className="mt-4 space-y-3 text-sm leading-relaxed text-slate-600">
                   <p>
-                    [Founder name] founded Inamdar Business Analysis after seeing how often
-                    Indian businesses commit (signing contracts, onboarding vendors,
-                    investing or lending) on the strength of an introduction, a GST number
-                    and a polished website, without checking the public-record risk
-                    indicators that already exist.
+                    Tirth Inamdar founded Inamdar Business Analysis after seeing how often
+                    businesses commit (signing contracts, onboarding vendors, investing, or lending)
+                    on the strength of a warm introduction, a GST number, and a polished website,
+                    without checking the risk indicators that already exist in official records.
                   </p>
                   <p>
-                    [Add background: relevant experience in compliance / due diligence /
-                    legal research / company secretarial / finance, years of experience,
-                    and any qualifications. Keep it modest and factual.]
+                    Tirth is an India-based corporate lawyer and senior corporate paralegal with
+                    substantial experience supporting both Indian businesses and U.S. legal teams,
+                    including ongoing corporate support for a Florida law firm. His experience
+                    spanning business formations, transactions, contract review, and compliance operations
+                    brings a disciplined, structured, and highly responsive approach to public-record due diligence.
                   </p>
                   <p>
                     The aim is simple: turn scattered public records into a clear,
                     source-linked risk picture that a busy decision-maker can actually
-                    use, prepared carefully, honestly, and without overclaiming.
+                    use—prepared carefully, honestly, and without overclaiming.
                   </p>
                 </div>
               </div>

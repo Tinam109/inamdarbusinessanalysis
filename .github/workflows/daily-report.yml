@@ -1,0 +1,43 @@
+name: Daily AI Analytics Report
+
+on:
+  schedule:
+    # Runs daily at 02:00 UTC (7:30 AM IST / 10:00 PM EST)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # Allows manual trigger via the GitHub Actions UI
+
+jobs:
+  run-report:
+    name: Generate and Email Daily Report
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Analytics Report Script
+        run: npx tsx scripts/daily-report.ts
+        env:
+          POSTHOG_PROJECT_ID: ${{ secrets.POSTHOG_PROJECT_ID }}
+          POSTHOG_PERSONAL_API_KEY: ${{ secrets.POSTHOG_PERSONAL_API_KEY }}
+          POSTHOG_API_HOST: ${{ secrets.POSTHOG_API_HOST }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          REPORT_TO: ${{ secrets.REPORT_TO }}

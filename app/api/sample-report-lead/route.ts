@@ -56,5 +56,33 @@ export async function POST(request: Request) {
     );
   }
 
+  // Capturing event to PostHog asynchronously (non-blocking)
+  const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+  if (posthogKey) {
+    const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.posthog.com";
+    const ip = request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "";
+
+    fetch(`${posthogHost}/capture/`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        api_key: posthogKey,
+        event: "sample_report_requested",
+        properties: {
+          distinct_id: lead.email,
+          name: lead.name,
+          email: lead.email,
+          phone: lead.phone,
+          source: lead.source,
+          page: lead.page,
+          $ip: ip,
+          $user_agent: lead.userAgent,
+        },
+      }),
+    }).catch((err) => {
+      console.error("Failed to capture event to PostHog:", err);
+    });
+  }
+
   return NextResponse.json({ ok: true });
 }

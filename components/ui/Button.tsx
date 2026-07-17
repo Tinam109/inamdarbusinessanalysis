@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "accent";
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50";
+  "group inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
   primary:
@@ -13,6 +13,8 @@ const variants: Record<Variant, string> = {
   secondary:
     "border border-slate-200 bg-white text-brand shadow-soft hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-0.5",
   ghost: "text-brand-600 hover:text-brand hover:bg-slate-100",
+  accent:
+    "border border-accent-400/20 bg-gradient-to-r from-accent to-[#5f9bf3] text-white shadow-[0_4px_18px_-4px_rgba(74,133,226,0.45)] hover:from-accent-600 hover:to-accent hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_10px_25px_-4px_rgba(74,133,226,0.65)]",
 };
 
 const sizes: Record<Size, string> = {

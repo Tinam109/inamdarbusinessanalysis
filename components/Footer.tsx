@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { MessageCircle, MapPin, Phone, CalendarClock } from "lucide-react";
+import { MessageCircle, MapPin, Phone, CalendarClock, FileSearch } from "lucide-react";
 import { LogoMark } from "@/components/Logo";
+import { Button } from "@/components/ui/Button";
 
 const columns = [
   {
@@ -80,6 +81,12 @@ export function Footer() {
                 <MapPin className="h-4 w-4 text-brand-400" />
                 India
               </span>
+              <div className="pt-2">
+                <Button href="/sample-report" variant="accent" size="sm" className="w-full text-xs py-2 px-3">
+                  <FileSearch className="h-3.5 w-3.5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                  View Sample Report (PDF)
+                </Button>
+              </div>
             </div>
           </div>
 
