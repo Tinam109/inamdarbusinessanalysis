@@ -245,7 +245,7 @@ function buildBrandedHtmlEmail(
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Daily Web Analytics - Inamdar Business Analysis</title>
+  <title>Daily Web Analytics - Inamdar Legal</title>
 </head>
 <body style="background-color: #05080f; margin: 0; padding: 20px; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 680px; background-color: #0a0f1c; border: 1px solid #16203a; border-radius: 16px; overflow: hidden; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
@@ -256,7 +256,7 @@ function buildBrandedHtmlEmail(
           <tr>
             <td align="center">
               <span style="font-family: Sora, sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; letter-spacing: 1px;">
-                INAMDAR BUSINESS ANALYSIS
+                INAMDAR LEGAL
               </span>
               <div style="font-family: Inter, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #22d3ee; margin-top: 4px;">
                 AI GROWTH & ANALYTICS REPORT
@@ -665,8 +665,8 @@ async function main() {
     // --- AI Synthesis ---
     console.log("🧠 Querying AI model for business narrative...");
 
-    const systemPrompt = `You are the lead B2B Risk Intelligence Growth Analyst for Inamdar Business Analysis (www.inamdarbusinessanalysis.in).
-Inamdar Business Analysis is a counterparty due-diligence and risk-intelligence product. We turn scattered public records (MCA, GST, litigation, regulatory) into clear, source-backed risk reports for founders, investors, procurement teams, CAs, and CAs.
+    const systemPrompt = `You are the lead B2B Risk Intelligence Growth Analyst for Inamdar Legal (www.inamdarbusinessanalysis.in).
+Inamdar Legal is a counterparty due-diligence and risk-intelligence product. We turn scattered public records (MCA, GST, litigation, regulatory) into clear, source-backed risk reports for founders, investors, procurement teams, CAs, CSs, and lawyers.
 
 Your tone is CALM, PRECISE, and USEFUL. Do NOT use sensational, alarmist, or hype-filled language. Speak like a steady data analyst who highlights indicators and suggests actions.
 
