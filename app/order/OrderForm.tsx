@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { Shield, Clock, Send, CheckCircle2, MessageCircle, AlertCircle, Sparkles, Building, Landmark, TrendingUp, Scale, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { trackEvent } from "@/lib/analytics";
+import { getAttributionData } from "@/lib/utm";
 
 const REPORT_TIERS = [
   {
@@ -64,6 +65,7 @@ export function OrderForm() {
 
     startTransition(async () => {
       try {
+        const attribution = getAttributionData();
         const res = await fetch("/api/sample-report-lead", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -76,6 +78,7 @@ export function OrderForm() {
             tier: selectedTier,
             notes,
             source: "order_page",
+            ...attribution,
           }),
         });
 

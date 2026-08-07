@@ -7,6 +7,7 @@ import {
   FaqAccordion,
   FloatingMobileCta,
 } from "@/components/ResourceHelperComponents";
+import { ResourceAnalyticsTracker } from "@/components/ResourceAnalyticsTracker";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -99,6 +100,7 @@ export default function ResourceSlugPage({ params }: { params: { slug: string } 
 
   return (
     <main className="min-h-screen pt-24 pb-24 sm:pt-32">
+      <ResourceAnalyticsTracker slug={data.slug} title={data.title} />
       {/* Background radial glow */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-grid-faint [mask-image:radial-gradient(60%_50%_at_50%_0%,black,transparent)]" />

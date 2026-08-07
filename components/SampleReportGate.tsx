@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Download, CheckCircle2, FileText, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { trackEvent } from "@/lib/analytics";
+import { getAttributionData } from "@/lib/utm";
 
 const PDF_URL = "/inamdar-sample-report.pdf";
 
@@ -32,11 +33,13 @@ export function SampleReportGate() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const attribution = getAttributionData();
     const payload = {
       name: String(formData.get("name") || ""),
       email: String(formData.get("email") || ""),
       phone: String(formData.get("phone") || ""),
       source: "sample-report",
+      ...attribution,
     };
 
     try {

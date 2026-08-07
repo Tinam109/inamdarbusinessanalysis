@@ -5,6 +5,18 @@ type LeadPayload = {
   email?: string;
   phone?: string;
   source?: string;
+  entityName?: string;
+  tier?: string;
+  turnaround?: string;
+  notes?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+  gclid?: string;
+  referrer?: string;
+  landing_page?: string;
 };
 
 function clean(value: unknown) {
@@ -12,12 +24,6 @@ function clean(value: unknown) {
 }
 
 export async function POST(request: Request) {
-  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
-
-  if (!webhookUrl) {
-    return NextResponse.json({ ok: true, captureConfigured: false });
-  }
-
   let payload: LeadPayload;
 
   try {
@@ -31,29 +37,40 @@ export async function POST(request: Request) {
     email: clean(payload.email),
     phone: clean(payload.phone),
     source: clean(payload.source) || "sample-report",
-    page: "/sample-report",
+    entityName: clean(payload.entityName),
+    tier: clean(payload.tier),
+    turnaround: clean(payload.turnaround),
+    notes: clean(payload.notes),
+    utm_source: clean(payload.utm_source) || "direct",
+    utm_medium: clean(payload.utm_medium) || "none",
+    utm_campaign: clean(payload.utm_campaign) || "none",
+    utm_term: clean(payload.utm_term),
+    utm_content: clean(payload.utm_content),
+    gclid: clean(payload.gclid),
+    referrer: clean(payload.referrer) || "direct",
+    landing_page: clean(payload.landing_page) || "/sample-report",
     userAgent: request.headers.get("user-agent") || "",
     submittedAt: new Date().toISOString(),
   };
 
-  if (!lead.name || !lead.email || !lead.phone) {
+  if (!lead.name || !lead.email) {
     return NextResponse.json(
-      { error: "Name, email and phone are required." },
+      { error: "Name and email are required." },
       { status: 400 },
     );
   }
 
-  const response = await fetch(webhookUrl, {
-    method: "POST",
-    headers: { "Content-Type": "text/plain;charset=utf-8" },
-    body: JSON.stringify(lead),
-  });
-
-  if (!response.ok) {
-    return NextResponse.json(
-      { error: "Could not save lead. Please try again." },
-      { status: 502 },
-    );
+  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  if (webhookUrl) {
+    try {
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(lead),
+      });
+    } catch (e) {
+      console.error("Failed to forward lead to Google Sheets webhook:", e);
+    }
   }
 
   // Capturing event to PostHog asynchronously (non-blocking)
@@ -67,14 +84,23 @@ export async function POST(request: Request) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         api_key: posthogKey,
-        event: "sample_report_requested",
+        event: lead.source === "order_page" ? "order_requested" : "sample_report_requested",
         properties: {
           distinct_id: lead.email,
           name: lead.name,
           email: lead.email,
           phone: lead.phone,
           source: lead.source,
-          page: lead.page,
+          entity_name: lead.entityName,
+          tier: lead.tier,
+          turnaround: lead.turnaround,
+          utm_source: lead.utm_source,
+          utm_medium: lead.utm_medium,
+          utm_campaign: lead.utm_campaign,
+          utm_term: lead.utm_term,
+          utm_content: lead.utm_content,
+          referrer: lead.referrer,
+          landing_page: lead.landing_page,
           $ip: ip,
           $user_agent: lead.userAgent,
         },
