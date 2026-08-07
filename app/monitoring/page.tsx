@@ -15,7 +15,7 @@ import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBloc
 export const metadata: Metadata = {
   title: "Monitoring, Monthly Watchlist for Companies & Promoters",
   description:
-    "Monthly watchlist monitoring for selected companies, vendors or promoters. Get periodic re-checks and alerts when public records change, so risk indicators don't go stale after onboarding or investment.",
+    "Monthly watchlist monitoring for selected companies, vendors or promoters. Get periodic re-checks and alerts when public records change, so risk indicators do not go stale after onboarding or investment.",
   openGraph: {
     title: "Monitoring | Inamdar Business Analysis",
     description:
@@ -36,7 +36,7 @@ const steps = [
   { title: "Choose entities", desc: "Tell us which companies, vendors or promoters belong on the watchlist." },
   { title: "Set the cadence", desc: "Pick a monitoring cycle and the indicators that matter most to you." },
   { title: "We watch", desc: "We re-check public records on schedule and compare against the last read." },
-  { title: "You're alerted", desc: "Get a periodic summary plus alerts when something material changes." },
+  { title: "You are alerted", desc: "Get a periodic summary plus alerts when something material changes." },
 ];
 
 const deliverables = [
@@ -61,7 +61,7 @@ export default function MonitoringPage() {
             <span className="text-gradient">monthly watchlist.</span>
           </>
         }
-        description="Risk indicators don't stop at onboarding or investment. Monitoring keeps chosen companies, vendors and promoters under periodic public-records review, and tells you when something changes."
+        description="Risk indicators do not stop at onboarding or investment. Monitoring keeps chosen companies, vendors and promoters under periodic public-records review, and tells you when something changes."
         bullets={["Monthly re-checks", "Change alerts", "Periodic summaries"]}
       />
 
@@ -91,8 +91,8 @@ export default function MonitoringPage() {
       />
 
       <CTABanner
-        title="Don't let risk indicators go stale"
-        description="Tell us which entities to watch and how often. We'll set up a monitoring cycle that fits."
+        title="Do not let risk indicators go stale"
+        description="Tell us which entities to watch and how often. We will set up a monitoring cycle that fits."
       />
 
       <DisclaimerBlock />

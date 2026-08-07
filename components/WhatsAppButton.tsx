@@ -1,4 +1,7 @@
+"use client";
+
 import { CONTACT } from "@/lib/content";
+import { trackEvent } from "@/lib/analytics";
 
 /** Sticky click-to-chat WhatsApp button, fixed bottom-right on every page. */
 export function WhatsAppButton() {
@@ -8,6 +11,12 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
+      onClick={() => {
+        trackEvent("whatsapp_clicked", {
+          source: "floating_button",
+          url: typeof window !== "undefined" ? window.location.pathname : "",
+        });
+      }}
       className="group fixed bottom-5 right-5 z-50 flex items-center gap-0 overflow-hidden rounded-full bg-[#25D366] py-3 pl-3 pr-3 text-white shadow-lift transition-all duration-300 hover:gap-2 hover:pr-5"
     >
       <svg
@@ -23,3 +32,4 @@ export function WhatsAppButton() {
     </a>
   );
 }
+

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 // NOTE: Placeholders in [brackets] are for the founder to replace with real details.
 const principles = [
-  { icon: Link2, title: "Source-linked, always", desc: "Every material finding points to where it came from and the date it was searched. If we can't source it, we don't assert it." },
+  { icon: Link2, title: "Source-linked, always", desc: "Every material finding points to where it came from and the date it was searched. If we cannot source it, we do not assert it." },
   { icon: Eye, title: "Public records only", desc: "We work strictly with public and credible records and information you provide, never surveillance or non-public methods." },
   { icon: ScrollText, title: "Careful, neutral reporting", desc: "We report what the records show in plain language, flag match-confidence, and never overstate or editorialise." },
   { icon: ShieldCheck, title: "Decision-support, not verdicts", desc: "Our reports inform your decision. They are not credit ratings, legal opinions, private investigations or guarantees." },
@@ -79,7 +79,7 @@ export default function AboutPage() {
                   <p>
                     The aim is simple: turn scattered public records into a clear,
                     source-linked risk picture that a busy decision-maker can actually
-                    use—prepared carefully, honestly, and without overclaiming.
+                    use, prepared carefully, honestly, and without overclaiming.
                   </p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow="What we stand for"
-              title="Principles we won't compromise on"
+              title="Principles we will not compromise on"
               align="center"
             />
           </Reveal>

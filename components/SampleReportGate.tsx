@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Download, CheckCircle2, FileText, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { trackEvent } from "@/lib/analytics";
 
 const PDF_URL = "/inamdar-sample-report.pdf";
 
@@ -49,6 +50,12 @@ export function SampleReportGate() {
         const body = await response.json().catch(() => null);
         throw new Error(body?.error || "Could not save your details. Please try again.");
       }
+
+      trackEvent("sample_report_downloaded", {
+        page: "/sample-report",
+        has_email: Boolean(payload.email),
+        has_phone: Boolean(payload.phone),
+      });
 
       setDone(true);
       triggerDownload();

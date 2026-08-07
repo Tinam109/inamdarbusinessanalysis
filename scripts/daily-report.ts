@@ -95,7 +95,7 @@ Today was a highly active day on the website, seeing steady growth in sessions a
         { role: "system", content: systemPrompt },
         { role: "user", content: prompt }
       ],
-      temperature: 0.2
+      temperature: 1
     })
   });
 

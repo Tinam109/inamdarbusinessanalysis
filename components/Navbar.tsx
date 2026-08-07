@@ -16,8 +16,10 @@ const navLinks = [
 ];
 
 const reportPages = [
-  { label: "Vendor Risk Report", href: "/vendor-risk-report" },
+  { label: "Vendor Risk Report (Procurement)", href: "/vendor-risk-report" },
   { label: "Investor Red Flag Report", href: "/investor-red-flag-report" },
+  { label: "Lender Credit Diligence", href: "/lender-credit-diligence" },
+  { label: "For CAs & Legal Advisors", href: "/advisors-ca-lawyers" },
   { label: "Litigation & Compliance Check", href: "/litigation-compliance-check" },
   { label: "Monitoring", href: "/monitoring" },
   { label: "Sample Report", href: "/sample-report" },

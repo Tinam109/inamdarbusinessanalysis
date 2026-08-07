@@ -92,7 +92,7 @@ export default function InvestorRedFlagReportPage() {
 
       <CTABanner
         title="See the risk before you write the cheque"
-        description="Tell us the company and promoters you're screening. We'll reply with scope, turnaround and next steps."
+        description="Tell us the company and promoters you are screening. We will reply with scope, turnaround and next steps."
       />
 
       <DisclaimerBlock />

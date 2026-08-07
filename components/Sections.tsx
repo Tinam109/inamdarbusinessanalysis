@@ -41,10 +41,10 @@ export function ContactSection() {
             title={
               <>
                 Share the entity.{" "}
-                <span className="text-gradient">We&apos;ll suggest the right scope.</span>
+                <span className="text-gradient">We will suggest the right scope.</span>
               </>
             }
-            description="Not sure which check you need? Tell us the entity and the decision you're making over a 15-minute call, or message us on WhatsApp. We'll confirm scope, turnaround and a quote, no obligation."
+            description="Not sure which check you need? Tell us the entity and the decision you are making over a 15-minute call, or message us on WhatsApp. We will confirm scope, turnaround and a quote, no obligation."
           />
           <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
             {[

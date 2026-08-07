@@ -92,7 +92,7 @@ export default function LitigationComplianceCheckPage() {
 
       <CTABanner
         title="Search the public record with confidence"
-        description="Tell us the subjects and the scope. We'll reply with what we can cover, turnaround and next steps."
+        description="Tell us the subjects and the scope. We will reply with what we can cover, turnaround and next steps."
       />
 
       <DisclaimerBlock />

@@ -33,3 +33,5 @@ next-env.d.ts
 
 # generated analytics reports
 /reports
+
+.vercel

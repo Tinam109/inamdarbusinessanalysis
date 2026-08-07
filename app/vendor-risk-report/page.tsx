@@ -93,7 +93,7 @@ export default function VendorRiskReportPage() {
 
       <CTABanner
         title="Onboard the right vendors with confidence"
-        description="Run a public-records check before the PO. Tell us the vendor and we'll come back with scope and turnaround."
+        description="Run a public-records check before the PO. Tell us the vendor and we will come back with scope and turnaround."
       />
 
       <DisclaimerBlock />

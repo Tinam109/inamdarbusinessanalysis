@@ -1,0 +1,48 @@
+{
+  "slug": "real-estate-infra-contractor-vetting",
+  "title": "Infrastructure & Real Estate EPC Contractor Diligence & RERA Vetting",
+  "subtitle": "How developers, infra funds, and tender committees verify EPC contractors, joint-venture partners, and project entities across NCLT, RERA, and MCA registries.",
+  "category": "Real Estate & Infra",
+  "keyword": "infrastructure contractor due diligence India",
+  "targetAudience": "Real Estate Developers, Infrastructure Fund Managers, General Contractors, Government Tender Procurement Committees",
+  "intro": "In India's fast-growing infrastructure and real estate sectors, project delays and financial distress among Engineering, Procurement, and Construction (EPC) contractors lead to massive cost overruns, bank guarantee invocations, and legal deadlocks. Conducting targeted infrastructure contractor due diligence in India requires validating corporate solvency, examining NCLT insolvency petitions, checking state RERA enforcement orders, and auditing government debarment or blacklisting notices.",
+  "whyItMatters": "EPC contractors often bid aggressively on multi-crore infrastructure projects while carrying heavy debt burdens. If an EPC contractor faces insolvency proceedings under Section 7 or Section 9 of the Insolvency and Bankruptcy Code (IBC), or has been blacklisted by state PWD or NHAI authorities, the project owner faces immediate work stoppages and severe financial liability. Furthermore, in real estate development, failure to verify a joint-venture (JV) partner's RERA compliance track record can result in heavy monetary penalties and project registration revocation. Independent diligence ensures that contractor selection is grounded in verified operational financial health.",
+  "redFlagsHeading": "Red Flags in Infrastructure & Construction Contractors",
+  "redFlagsIntro": "Project developers and procurement committees should flag these high-risk markers during contractor pre-qualification:",
+  "redFlags": [
+    "Admission of NCLT Section 9 insolvency petition filed by sub-contractors or material suppliers",
+    "Active debarment or blacklisting orders issued by PWD, NHAI, Indian Railways, or municipal bodies",
+    "Multiple RERA order defaults or customer compensation execution petitions",
+    "Open MCA charges on heavy machinery and equipment pledged to non-bank lenders"
+  ],
+  "redFlagsList": "**1. Admission of NCLT Section 9 insolvency petition filed by sub-contractors or material suppliers**: Signals severe liquidity crisis and imminent corporate insolvency resolution process (CIRP).\n\n**2. Active debarment or blacklisting orders issued by PWD, NHAI, Indian Railways, or municipal bodies**: Indicates past contractual non-performance, fraud, or safety violations.\n\n**3. Multiple RERA order defaults or customer compensation execution petitions**: Reveals systemic project delays and non-compliance with statutory real estate laws.\n\n**4. Open MCA charges on heavy machinery and equipment pledged to non-bank lenders**: Exposes contractor equipment seizure risk during operational defaults.",
+  "checklistHeading": "Infrastructure & EPC Contractor Vetting Checklist",
+  "checklistIntro": "Integrate this step-by-step verification process into your contractor selection and tender evaluation framework:",
+  "checklist": [
+    "Verify NCLT and IBC court filings for pending or admitted insolvency proceedings against the contractor",
+    "Audit government debarment, tender blacklisting, and caution registries across central and state authorities",
+    "Cross-examine RERA portal registrations, project completion certificates, and penalty order history",
+    "Inspect MCA charge registers to verify debt commitments and asset hypothecation"
+  ],
+  "checklistList": "- **[ ] Step 1: Check NCLT Insolvency Filings** - Verify absence of Corporate Insolvency Resolution Process (CIRP) admissions.\n- **[ ] Step 2: Audit Debarment Registries** - Check PSUs, NHAI, Railways, and state PWD blacklisting databases.\n- **[ ] Step 3: Review RERA Enforcement Orders** - Examine past compliance track records across state Real Estate Regulatory Authorities.\n- **[ ] Step 4: Examine MCA Asset Hypothecation** - Audit bank liens on cranes, batching plants, and heavy machinery.",
+  "comparisonHeading": "Self-Declared Tender Documents vs. Inamdar Contractor Intelligence",
+  "comparisonText": "Tender submissions rely heavily on self-attested affidavits and turnover certificates, which often conceal active NCLT petitions or regional debarment orders. An Inamdar Business Analysis report provides independent, source-verified intelligence on EPC contractors and JV partners within 48-72 hours.",
+  "caseStudyHeading": "Case Study: Saving a Commercial Infra Project from Contractor Insolvency",
+  "caseStudyBody": "**Background**: A real estate developer was on the verge of awarding a ₹40 Crore EPC contract based on self-certified credentials.\n\n**Impact**: Our diligence revealed an admitted NCLT insolvency petition filed against the contractor by a steel supplier and a blacklisting order from a regional PWD authority.\n\n**Key Takeaway**: Pre-award NCLT and debarment checks prevent catastrophic project mid-way collapses.",
+  "summaryAndCta": "Mitigate project delay and financial risk by vetting EPC contractors and JV partners with source-backed intelligence. Contact Inamdar Business Analysis or download a sample report.",
+  "faqs": [
+    {
+      "q": "Why are NCLT insolvency checks essential before awarding EPC contracts?",
+      "a": "If an EPC contractor enters NCLT insolvency, moratorium provisions freeze assets, halting project execution and locking up project sites indefinitely."
+    },
+    {
+      "q": "How does Inamdar verify government debarment and blacklisting status?",
+      "a": "We aggregate official circulars, procurement portal debarment lists, and legal notices issued by central and state public sector undertakings."
+    },
+    {
+      "q": "Can RERA compliance records be verified for joint-venture partners?",
+      "a": "Yes, we analyze past project registrations, penalty orders, and revocation notices on state RERA portals."
+    }
+  ],
+  "readTime": "6 mins"
+}

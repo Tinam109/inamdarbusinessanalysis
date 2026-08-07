@@ -203,8 +203,8 @@ export const methodology: { title: string; desc: string }[] = [
     desc: "Each finding carries its source link and the date of search. We report what the records show in neutral language, no editorialising, no claims beyond the record.",
   },
   {
-    title: "What we don't do",
-    desc: "We don't give legal advice, issue credit ratings, run private investigations or guarantee future conduct. A report is a public-records risk picture to inform your own decision.",
+    title: "What we do not do",
+    desc: "We do not give legal advice, issue credit ratings, run private investigations or guarantee future conduct. A report is a public-records risk picture to inform your own decision.",
   },
 ];
 
@@ -322,7 +322,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Can I customise the scope?",
-    a: "Yes. Scope is flexible, by entity type, depth of litigation search, linkage review, add-ons and turnaround. Share the decision you're making and we'll suggest the right scope and a quote.",
+    a: "Yes. Scope is flexible, by entity type, depth of litigation search, linkage review, add-ons and turnaround. Share the decision you are making and we will suggest the right scope and a quote.",
   },
 ];
 
@@ -334,9 +334,9 @@ export const reportTypes: {
   turnaround: string;
   priceAnchor: string;
 }[] = [
-  { name: "Basic Check", slug: "basic", bestFor: "Low-value vendors; a quick identity and registration sanity check.", turnaround: "24–48 working hours", priceAnchor: "From ₹1,500 / entity" },
-  { name: "Standard Report", slug: "standard", bestFor: "Vendor onboarding before a PO, distributor/dealer or franchise screening, pre-contract checks.", turnaround: "3–5 working days", priceAnchor: "From ₹3,000 / entity" },
-  { name: "Enhanced Report", slug: "enhanced", bestFor: "High-value vendors, investor red-flag review, acquisitions, lending, partnerships, promoter concerns.", turnaround: "5–7 working days / scope-dependent", priceAnchor: "₹5,000 to ₹7,000 / entity" },
+  { name: "Basic Check", slug: "basic", bestFor: "Low-value vendors; a quick identity and registration sanity check.", turnaround: "24-48 working hours", priceAnchor: "From ₹1,500 / entity" },
+  { name: "Standard Report", slug: "standard", bestFor: "Vendor onboarding before a PO, distributor/dealer or franchise screening, pre-contract checks.", turnaround: "3-5 working days", priceAnchor: "From ₹3,000 / entity" },
+  { name: "Enhanced Report", slug: "enhanced", bestFor: "High-value vendors, investor red-flag review, acquisitions, lending, partnerships, promoter concerns.", turnaround: "5-7 working days / scope-dependent", priceAnchor: "₹5,000 to ₹7,000 / entity" },
   { name: "Monitoring", slug: "monitoring", bestFor: "Existing vendor portfolios, repeat suppliers, portfolio companies, high-risk counterparties.", turnaround: "Monthly / quarterly", priceAnchor: "Retainer, quote on scope" },
 ];
 
@@ -383,7 +383,7 @@ export const optionComparison: {
     option: "Credit report",
     goodFor: "Creditworthiness, payment behaviour and a bureau score.",
     limitation: "Not designed for litigation, regulatory, insolvency or director-linkage red flags.",
-    fit: "We cover the public-record risk side a credit score doesn't show.",
+    fit: "We cover the public-record risk side a credit score does not show.",
   },
   {
     option: "Legal opinion",
