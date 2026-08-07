@@ -103,10 +103,10 @@ export function Navbar() {
         <div className="hidden items-center gap-2.5 lg:flex">
           <Button href="/sample-report" variant="accent" size="sm">
             <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-            View Sample PDF
+            Sample Report
           </Button>
-          <Button href="/#contact" size="sm">
-            Request a Report
+          <Button href="/order" size="sm">
+            Order a Report
           </Button>
         </div>
 
@@ -143,8 +143,8 @@ export function Navbar() {
                 <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
                 View Sample Report
               </Button>
-              <Button href="/#contact" className="w-full" onClick={() => setOpen(false)}>
-                Request a Report
+              <Button href="/order" className="w-full" onClick={() => setOpen(false)}>
+                Order a Report
               </Button>
             </div>
           </div>

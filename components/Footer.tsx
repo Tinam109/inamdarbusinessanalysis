@@ -22,6 +22,7 @@ const columns = [
       { label: "Risk Framework", href: "/#risk-framework" },
       { label: "How We Compare", href: "/#comparison" },
       { label: "Sample Report", href: "/sample-report" },
+      { label: "Order a Report", href: "/order" },
     ],
   },
   {

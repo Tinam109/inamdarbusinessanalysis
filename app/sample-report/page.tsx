@@ -9,20 +9,22 @@ import {
   ShieldCheck,
   FileText,
   Check,
+  Eye,
 } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SampleReportGate } from "@/components/SampleReportGate";
+import { SampleReportViewer } from "@/components/SampleReportViewer";
 import { DisclaimerBlock, ContactSection } from "@/components/Sections";
 
 export const metadata: Metadata = {
-  title: "Sample Business Risk Report, Download the PDF",
+  title: "Sample Business Risk Report, Download PDF & Interactive Preview | Inamdar",
   description:
-    "Download an illustrative, fictional sample of an Inamdar Business Analysis public-record risk report: identity match, risk rating and tags, litigation table, director linkages, source appendix and disclaimer.",
-  alternates: { canonical: "/sample-report" },
+    "Explore an interactive preview and download an illustrative sample of an Inamdar Business Analysis public-record risk report covering MCA charges, litigation, GST compliance, and promoter background checks.",
+  alternates: { canonical: "https://www.inamdarbusinessanalysis.in/sample-report" },
   openGraph: {
-    title: "Sample Business Risk Report (PDF)",
+    title: "Sample Business Risk Report (PDF & Interactive Preview)",
     description:
-      "See exactly what you receive: a clean, source-linked public-record risk report. Download the fictional sample.",
+      "See exactly what you receive: a clean, source-linked public-record risk report. Explore the interactive sample.",
   },
 };
 
@@ -53,8 +55,7 @@ export default function SampleReportPage() {
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-500">
               A clean, source-linked PDF written for a real decision. Download the
-              fictional sample for <span className="font-medium text-brand">ABC Industrial
-              Supplies Pvt Ltd</span> to see the structure, risk rating and tone.
+              sample report or interact with the live redacted viewer below to see the structure, MCA charges, litigation checks and risk scorecard.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -70,7 +71,7 @@ export default function SampleReportPage() {
 
             <div className="mt-8 inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs text-slate-500 shadow-soft">
               <Check className="h-3.5 w-3.5 text-accent-600" />
-              4-page PDF | illustrative and fictional | no real entity
+              Comprehensive 4-part structure | illustrative demo | source-linked records
             </div>
           </Reveal>
 
@@ -91,6 +92,26 @@ export default function SampleReportPage() {
               <SampleReportGate />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Interactive Report Document Preview Section */}
+      <section className="section-pad bg-slate-50/70 border-y border-slate-200/80">
+        <div className="container-x">
+          <div className="mx-auto max-w-3xl text-center mb-10">
+            <span className="inline-flex items-center gap-2 rounded-full border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-700">
+              <Eye className="h-3.5 w-3.5" />
+              Live Interactive Preview
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-brand sm:text-4xl">
+              Inspect Real Sample Findings
+            </h2>
+            <p className="mt-2 text-sm text-slate-600">
+              Click through the tabs below to explore how MCA charge registers, commercial court litigation, and GST filings are synthesized into actionable risk flags.
+            </p>
+          </div>
+
+          <SampleReportViewer />
         </div>
       </section>
 

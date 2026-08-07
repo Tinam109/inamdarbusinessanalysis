@@ -39,6 +39,8 @@ import { RiskSignalTabs } from "@/components/RiskSignalTabs";
 import { ReportTypesMatrix } from "@/components/ReportTypesMatrix";
 import { OptionComparison } from "@/components/OptionComparison";
 import { RiskFramework } from "@/components/RiskFramework";
+import { RiskCalculator } from "@/components/RiskCalculator";
+import { CaseStudies } from "@/components/CaseStudies";
 import { Faq } from "@/components/Faq";
 import { DisclaimerBlock, ContactSection } from "@/components/Sections";
 import {
@@ -428,6 +430,18 @@ export default function HomePage() {
             <div className="mt-12">
               <OptionComparison />
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ============ CASE STUDIES ============ */}
+      <CaseStudies />
+
+      {/* ============ INTERACTIVE RISK CALCULATOR ============ */}
+      <section id="calculator" className="section-pad scroll-mt-20 bg-slate-50/50">
+        <div className="container-x">
+          <Reveal>
+            <RiskCalculator />
           </Reveal>
         </div>
       </section>
