@@ -48,15 +48,24 @@ export default function SampleReportPage() {
           {/* Left: pitch + preview */}
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-700">
-              Sample report
+              Sample report preview
             </span>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-brand sm:text-5xl">
-              See exactly what you&apos;ll receive
+              See What an Inamdar Risk Report Looks Like Before You Order
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-500">
-              A clean, source-linked PDF written for a real decision. Download the
-              sample report or interact with the live redacted viewer below to see the structure, MCA charges, litigation checks and risk scorecard.
+              This fictional sample demonstrates the exact report structure, MCA charge analysis, commercial court litigation tables, GST filing track record, and source-backed findings delivered to our clients.
             </p>
+
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a
+                href="/order"
+                className="inline-flex items-center gap-2 rounded-xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:bg-accent-700 hover:shadow-lift"
+              >
+                Request a Report for a Real Company
+                <Check className="h-4 w-4" />
+              </a>
+            </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {inside.map((item) => (
@@ -71,7 +80,7 @@ export default function SampleReportPage() {
 
             <div className="mt-8 inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs text-slate-500 shadow-soft">
               <Check className="h-3.5 w-3.5 text-accent-600" />
-              Comprehensive 4-part structure | illustrative demo | source-linked records
+              Fictional entity demonstration · Source-backed public records structure · Human-reviewed
             </div>
           </Reveal>
 

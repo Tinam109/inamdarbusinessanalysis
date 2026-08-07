@@ -54,7 +54,7 @@ export default function LitigationComplianceCheckPage() {
   return (
     <>
       <PageHero
-        eyebrow="For founders, CAs, CSs, lawyers & consultants"
+        eyebrow="Litigation & Compliance Check — ₹3,499 — Delivered within 24–48 hours"
         title={
           <>
             A public-records search across courts, compliance, tax &{" "}
@@ -62,7 +62,7 @@ export default function LitigationComplianceCheckPage() {
           </>
         }
         description="A structured search of available public records, built for professionals who need source-backed litigation and compliance indicators they can stand behind, with a clear date of search."
-        bullets={["Court searches", "Tax & compliance", "Source-linked findings"]}
+        bullets={["₹3,499 Fixed Price", "24–48h Turnaround", "Commercial Courts & Tax Tribunals"]}
       />
 
       <FeatureGrid

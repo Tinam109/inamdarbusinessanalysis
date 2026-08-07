@@ -60,7 +60,7 @@ export default function OrderPage() {
                       2
                     </span>
                     <span>
-                      <strong>Multi-Registry Scraping & Search:</strong> MCA charge register, eCourts commercial benches, High Court registries, and GST return logs are examined.
+                      <strong>Multi-Registry Public Records Review:</strong> MCA charge register, eCourts commercial benches, High Court registries, and GST return logs are examined.
                     </span>
                   </li>
                   <li className="flex gap-3">

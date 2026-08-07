@@ -82,7 +82,7 @@ export default function AdvisorsCaLawyersPage() {
   return (
     <>
       <PageHero
-        eyebrow="For CAs, CSs & Legal Advisors"
+        eyebrow="Advisory Diligence Support — From ₹2,499 — Delivered within 24–48 hours"
         title={
           <>
             Outsourced public-records due diligence for{" "}
@@ -90,7 +90,7 @@ export default function AdvisorsCaLawyersPage() {
           </>
         }
         description="Stop wasting billable hours manually digging through MCA, court cause lists, and GST registries. We compile human-reviewed, source-linked public records reports in 24–48 hours."
-        bullets={["12+ public sources", "Source URLs included", "24-48hr turnaround"]}
+        bullets={["From ₹2,499 / Entity", "24–48h Turnaround", "Source-Linked Findings"]}
       />
 
       <FeatureGrid

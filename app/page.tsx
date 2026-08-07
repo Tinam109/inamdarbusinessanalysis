@@ -82,27 +82,26 @@ export default function HomePage() {
             </Badge>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-brand sm:text-5xl lg:text-6xl">
               Know who you are dealing with before you{" "}
-              <span className="text-gradient">sign, invest, lend or onboard.</span>
+              <span className="text-gradient">sign, invest, lend, onboard, or release funds.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
-              We prepare source-linked public-record risk reports on Indian
-              companies, vendors and promoters, covering identity, filings,
-              litigation, regulatory references, insolvency indicators and
-              director linkages.
+              Source-backed public-record due diligence on Indian companies, vendors,
+              borrowers, promoters, and counterparties — human-reviewed and delivered
+              in 24–48 hours.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="#contact" size="lg">
-                Request a Report
+              <Button href="/order" size="lg">
+                Request Due Diligence
                 <ArrowRight className="h-4 w-4" />
               </Button>
               <Button href="/sample-report" variant="accent" size="lg">
                 <FileSearch className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-                View Sample Report
+                View Sample Risk Report
               </Button>
             </div>
             <div className="mt-3">
-              <Button href="#contact" variant="ghost" size="sm">
-                Not sure what you need? Get scope &amp; quote
+              <Button href="/order" variant="ghost" size="sm">
+                Get fixed pricing &amp; 24h turnaround options
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
@@ -533,11 +532,11 @@ export default function HomePage() {
                   </ul>
                   <div className="mt-6">
                     <Button
-                      href="#contact"
+                      href="/order"
                       variant={tier.featured ? "secondary" : "primary"}
                       className={tier.featured ? "w-full" : "w-full"}
                     >
-                      Request a Report
+                      Request Due Diligence
                     </Button>
                   </div>
                 </div>

@@ -55,15 +55,19 @@ export default function VendorRiskReportPage() {
   return (
     <>
       <PageHero
-        eyebrow="For procurement & SMEs"
+        eyebrow="Vendor Risk Report — ₹2,499 — Delivered within 48 hours"
         title={
           <>
-            Check vendors before you onboard, raise a PO or extend{" "}
-            <span className="text-gradient">business credit.</span>
+            Check Vendors Before You Onboard, Raise a PO or{" "}
+            <span className="text-gradient">Release an Advance.</span>
           </>
         }
-        description="A focused, public-records based read on a supplier, so procurement teams, SMEs and corporates can onboard counterparties with a clear view of identity, status and risk indicators."
-        bullets={["Identity match", "Litigation indicators", "Compliance signals"]}
+        description="A structured, source-backed public records verification on suppliers and vendors covering MCA charge registers, GST filing continuity, eCourts litigation, NCLT insolvency, and promoter linkages — delivered in 48 hours for ₹2,499."
+        bullets={[
+          "₹2,499 Fixed Price",
+          "48-Hour Delivery",
+          "MCA, GST & eCourts Verifications",
+        ]}
       />
 
       <FeatureGrid

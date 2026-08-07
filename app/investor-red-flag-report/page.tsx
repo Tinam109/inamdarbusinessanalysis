@@ -54,7 +54,7 @@ export default function InvestorRedFlagReportPage() {
   return (
     <>
       <PageHero
-        eyebrow="For investors, acquirers & lenders"
+        eyebrow="Investor Red Flag Report — ₹6,999 — Delivered within 48 hours"
         title={
           <>
             Surface the red flags before the{" "}
@@ -62,7 +62,7 @@ export default function InvestorRedFlagReportPage() {
           </>
         }
         description="A public-records based read on a company and its promoters, built for angels, VCs, acquirers and lenders who need to see litigation, regulatory and linkage risk before they invest or lend."
-        bullets={["Promoter checks", "Litigation history", "Regulatory red flags"]}
+        bullets={["₹6,999 Fixed Price", "48-Hour Delivery", "Promoter & Struck-Off Checks"]}
       />
 
       <FeatureGrid

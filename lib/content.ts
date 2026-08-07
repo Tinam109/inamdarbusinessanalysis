@@ -138,53 +138,60 @@ export const pricingTiers: {
   featured?: boolean;
 }[] = [
   {
-    name: "Basic Check",
-    tagline: "A fast identity and status read on a single entity.",
-    priceAnchor: "From ₹1,500",
-    turnaround: "Usually 1–2 working days",
+    name: "Vendor Risk Report",
+    tagline: "Procurement, supplier onboarding, advances, purchase orders, and vendor risk verification.",
+    priceAnchor: "₹2,499",
+    turnaround: "Delivered within 48 hours",
     features: [
-      "Identity & registration match",
-      "MCA / ROC status indicators",
-      "GST status signal",
-      "Source links + date of search",
-    ],
-  },
-  {
-    name: "Standard Report",
-    tagline: "A rounded public-records risk picture for most decisions.",
-    priceAnchor: "From ₹3,000",
-    turnaround: "Usually 3–5 working days",
-    features: [
-      "Everything in Basic Check",
-      "Litigation search (district & High Court)",
-      "Compliance risk indicators",
-      "Overall risk summary",
+      "Identity & MCA / ROC master data verification",
+      "MCA Index of Charges & open asset hypothecations",
+      "GST registration & GSTR-3B filing signals",
+      "eCourts litigation & Section 138 cheque bounce search",
+      "Promoter / Director cross-holdings & struck-off check",
+      "Source links + clear date of search",
     ],
     featured: true,
   },
   {
-    name: "Enhanced Report",
-    tagline: "Deeper diligence across linkages and regulatory records.",
-    priceAnchor: "₹5,000 to ₹7,000",
-    turnaround: "Timeline depends on scope",
+    name: "Litigation & Compliance Check",
+    tagline: "Commercial courts, civil recovery, arbitration awards, and statutory compliance history.",
+    priceAnchor: "₹3,499",
+    turnaround: "Delivered within 24–48 hours",
     features: [
-      "Everything in Standard Report",
-      "Director & promoter linkage mapping",
-      "Regulatory & insolvency references",
-      "Adverse public-record review",
+      "District Courts & High Court commercial litigation search",
+      "Section 138 Negotiable Instruments Act cases",
+      "Consumer dispute & tribunal references",
+      "NCLT / IBC insolvency registers",
+      "EPFO / statutory compliance tracking",
+      "Overall risk summary & source appendix",
     ],
   },
   {
-    name: "Monitoring",
-    tagline: "Ongoing watchlist coverage on selected entities.",
-    // TODO: replace with the agreed monthly figure, e.g. "Retainer from ₹Z/mo".
-    priceAnchor: "Monthly retainer",
-    turnaround: "Ongoing, monthly cycle",
+    name: "Lender Credit Diligence",
+    tagline: "Pre-disbursement credit diligence, prior bank floating charges, and borrower solvency signals.",
+    priceAnchor: "₹3,999",
+    turnaround: "Delivered within 24–48 hours",
     features: [
-      "Monthly re-checks on a watchlist",
-      "Change alerts on key records",
-      "Periodic summary reports",
-      "Scope set per engagement",
+      "Detailed MCA Charge Register & open liens",
+      "Commercial court litigation & recovery suits",
+      "Director disqualifications under Sec 164(2)",
+      "Tax filing track record & GST status",
+      "NCLT insolvency & corporate stress scan",
+      "Promoter entity linkages & risk rating",
+    ],
+  },
+  {
+    name: "Investor Red Flag Report",
+    tagline: "Pre-investment screening covering founder background, struck-off entities, and governance.",
+    priceAnchor: "₹6,999",
+    turnaround: "Delivered within 48 hours",
+    features: [
+      "Promoter multi-directorships & historical tracking",
+      "Section 248 struck-off entity verification",
+      "Full litigation, arbitration & NCLT scan",
+      "Regulatory enforcement & debarment references",
+      "Comprehensive 360 public-record synthesis",
+      "Human-reviewed executive scorecard",
     ],
   },
 ];
@@ -192,11 +199,11 @@ export const pricingTiers: {
 export const methodology: { title: string; desc: string }[] = [
   {
     title: "How we match identity",
-    desc: "We anchor every search to verifiable identifiers, CIN, LLPIN, GSTIN, director DINs and registered names, so findings are tied to the right entity, not a similarly named one.",
+    desc: "We anchor every search to verifiable identifiers: CIN, LLPIN, GSTIN, director DINs and registered names, so findings are tied to the right entity, not a similarly named one.",
   },
   {
     title: "Sources we typically check",
-    desc: "MCA / ROC, GST status, EPFO / ESIC (including employee-count trends), district courts, High Courts and the Supreme Court, consumer forums, ITAT, IBC references, SEBI and regulatory orders, debarment lists and other credible public sources.",
+    desc: "MCA / ROC, GST status, EPFO / ESIC, district courts, High Courts and the Supreme Court, consumer forums, ITAT, IBC references, SEBI and regulatory orders, debarment lists and other credible public sources.",
   },
   {
     title: "How we report findings",
@@ -334,35 +341,33 @@ export const reportTypes: {
   turnaround: string;
   priceAnchor: string;
 }[] = [
-  { name: "Basic Check", slug: "basic", bestFor: "Low-value vendors; a quick identity and registration sanity check.", turnaround: "24-48 working hours", priceAnchor: "From ₹1,500 / entity" },
-  { name: "Standard Report", slug: "standard", bestFor: "Vendor onboarding before a PO, distributor/dealer or franchise screening, pre-contract checks.", turnaround: "3-5 working days", priceAnchor: "From ₹3,000 / entity" },
-  { name: "Enhanced Report", slug: "enhanced", bestFor: "High-value vendors, investor red-flag review, acquisitions, lending, partnerships, promoter concerns.", turnaround: "5-7 working days / scope-dependent", priceAnchor: "₹5,000 to ₹7,000 / entity" },
-  { name: "Monitoring", slug: "monitoring", bestFor: "Existing vendor portfolios, repeat suppliers, portfolio companies, high-risk counterparties.", turnaround: "Monthly / quarterly", priceAnchor: "Retainer, quote on scope" },
+  { name: "Vendor Risk Report", slug: "vendor-risk-report", bestFor: "Procurement, supplier onboarding before a PO, advance release, and vendor vetting.", turnaround: "Delivered within 48 hours", priceAnchor: "₹2,499 / entity" },
+  { name: "Litigation & Compliance Check", slug: "litigation-compliance-check", bestFor: "Commercial disputes, Section 138 NI Act, arbitration awards, and legal risk assessment.", turnaround: "Delivered within 24–48 hours", priceAnchor: "₹3,499 / entity" },
+  { name: "Lender Credit Diligence", slug: "lender-credit-diligence", bestFor: "Pre-disbursement SME credit checks, prior bank floating charges, and borrower solvency signals.", turnaround: "Delivered within 24–48 hours", priceAnchor: "₹3,999 / entity" },
+  { name: "Investor Red Flag Report", slug: "investor-red-flag-report", bestFor: "Pre-investment diligence, founder background verification, struck-off entities, and promoter linkages.", turnaround: "Delivered within 48 hours", priceAnchor: "₹6,999 / entity" },
 ];
 
-// Coverage matrix: each row maps to the four report types.
-// Values: true (included), "partial" (basic/where relevant), false (not included), or a label.
+// Coverage matrix: each row maps to the four official report types.
 export const coverageMatrix: {
   feature: string;
-  basic: boolean | "partial";
-  standard: boolean | "partial";
-  enhanced: boolean | "partial";
-  monitoring: boolean | "partial";
+  vendor: boolean | "partial";
+  litigation: boolean | "partial";
+  lender: boolean | "partial";
+  investor: boolean | "partial";
 }[] = [
-  { feature: "Entity identity & registration match", basic: true, standard: true, enhanced: true, monitoring: true },
-  { feature: "MCA / ROC status & filings", basic: "partial", standard: true, enhanced: true, monitoring: true },
-  { feature: "GST status indicators", basic: true, standard: true, enhanced: true, monitoring: true },
-  { feature: "EPFO / ESIC & headcount trend", basic: false, standard: "partial", enhanced: true, monitoring: "partial" },
-  { feature: "Litigation search (district & High Court)", basic: false, standard: true, enhanced: true, monitoring: true },
-  { feature: "Supreme Court & tribunal search", basic: false, standard: "partial", enhanced: true, monitoring: "partial" },
-  { feature: "Consumer dispute search", basic: false, standard: true, enhanced: true, monitoring: "partial" },
-  { feature: "NCLT / IBC & tax (ITAT) references", basic: false, standard: "partial", enhanced: true, monitoring: true },
-  { feature: "SEBI / regulatory & debarment references", basic: false, standard: "partial", enhanced: true, monitoring: true },
-  { feature: "Director / promoter linkage review", basic: false, standard: "partial", enhanced: true, monitoring: true },
-  { feature: "Adverse public-record references", basic: false, standard: false, enhanced: true, monitoring: "partial" },
-  { feature: "Risk tags & overall risk rating", basic: "partial", standard: true, enhanced: true, monitoring: true },
-  { feature: "Source-linked appendix", basic: "partial", standard: true, enhanced: true, monitoring: true },
-  { feature: "Ongoing re-checks & change alerts", basic: false, standard: false, enhanced: false, monitoring: true },
+  { feature: "Entity identity & registration match", vendor: true, litigation: true, lender: true, investor: true },
+  { feature: "MCA / ROC master data & filings", vendor: true, litigation: true, lender: true, investor: true },
+  { feature: "MCA Index of Charges & open bank liens", vendor: true, litigation: "partial", lender: true, investor: true },
+  { feature: "GST status & GSTR-3B filing signals", vendor: true, litigation: true, lender: true, investor: true },
+  { feature: "District & Commercial Court litigation", vendor: true, litigation: true, lender: true, investor: true },
+  { feature: "Section 138 NI Act cheque bounce search", vendor: true, litigation: true, lender: true, investor: true },
+  { feature: "High Court & Supreme Court litigation", vendor: "partial", litigation: true, lender: true, investor: true },
+  { feature: "NCLT / IBC insolvency proceeding scan", vendor: "partial", litigation: true, lender: true, investor: true },
+  { feature: "Director disqualifications under Sec 164(2)", vendor: "partial", litigation: "partial", lender: true, investor: true },
+  { feature: "Promoter directorships & struck-off entities", vendor: "partial", litigation: "partial", lender: true, investor: true },
+  { feature: "SEBI & regulatory debarment orders", vendor: "partial", litigation: true, lender: true, investor: true },
+  { feature: "Overall risk scorecard & synthesis", vendor: true, litigation: true, lender: true, investor: true },
+  { feature: "Source-linked citations & search timestamps", vendor: true, litigation: true, lender: true, investor: true },
 ];
 
 // ----- Honest comparison vs alternatives -----
@@ -540,4 +545,4 @@ export const CONTACT = {
 };
 
 export const DISCLAIMER =
-  "This report is based on public records, information provided by the client and records available from official or credible sources as of the date of search. It is not a credit rating, legal opinion, private investigation, certificate of good standing or guarantee of future conduct.";
+  "This report is based on public records, information provided by the client, and records available from official or credible sources as of the date of search. It is prepared for decision support and is not a credit rating, legal opinion, private investigation, certificate of good standing, or guarantee of future performance or conduct.";

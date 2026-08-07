@@ -366,12 +366,12 @@ export default function ResourceSlugPage({ params }: { params: { slug: string } 
                 </p>
 
                 <div className="text-xl font-bold text-brand mb-4">
-                  From ₹3,000 <span className="text-xs text-slate-400 font-normal">/ entity</span>
+                  From ₹2,499 <span className="text-xs text-slate-400 font-normal">/ entity · 24–48h</span>
                 </div>
 
                 <div className="space-y-2">
-                  <Button href="/#contact" className="w-full justify-center py-2.5 text-sm">
-                    Order Verification
+                  <Button href="/order" className="w-full justify-center py-2.5 text-sm">
+                    Request Due Diligence
                   </Button>
                   <Button
                     href="/sample-report"

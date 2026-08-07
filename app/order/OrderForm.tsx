@@ -12,8 +12,16 @@ const REPORT_TIERS = [
     name: "Vendor Risk Report",
     audience: "Procurement & Supply Chain",
     price: "₹2,499",
-    turnaround: "24–48 Hours",
+    turnaround: "48 Hours",
     bullets: ["MCA Charge Register", "GST Filing Status", "Section 138 Cheque Bounce", "Basic Litigation"],
+  },
+  {
+    id: "litigation",
+    name: "Litigation & Compliance Check",
+    audience: "CAs, Law Firms & General Counsel",
+    price: "₹3,499",
+    turnaround: "24–48 Hours",
+    bullets: ["eCourts District & High Court", "Arbitration Proceedings", "EPFO & Labor Compliance", "Tribunal Filings"],
   },
   {
     id: "lender",
@@ -30,14 +38,6 @@ const REPORT_TIERS = [
     price: "₹6,999",
     turnaround: "48 Hours",
     bullets: ["Promoter Multi-Directorships", "Struck-Off Entities", "NCLT / Insolvency Scan", "Full 360 Scan"],
-  },
-  {
-    id: "litigation",
-    name: "Litigation & Compliance Check",
-    audience: "CAs, Law Firms & General Counsel",
-    price: "₹3,499",
-    turnaround: "24–48 Hours",
-    bullets: ["eCourts District & High Court", "Arbitration Proceedings", "EPFO & Labor Compliance", "Tribunal Filings"],
   },
 ];
 

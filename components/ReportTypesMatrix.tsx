@@ -54,16 +54,16 @@ export function ReportTypesMatrix() {
               <tr key={row.feature} className={i % 2 ? "bg-slate-50/40" : ""}>
                 <td className="p-4 text-slate-600">{row.feature}</td>
                 <td className="p-4">
-                  <Cell value={row.basic} />
+                  <Cell value={row.vendor} />
                 </td>
                 <td className="p-4">
-                  <Cell value={row.standard} />
+                  <Cell value={row.litigation} />
                 </td>
                 <td className="p-4">
-                  <Cell value={row.enhanced} />
+                  <Cell value={row.lender} />
                 </td>
                 <td className="p-4">
-                  <Cell value={row.monitoring} />
+                  <Cell value={row.investor} />
                 </td>
               </tr>
             ))}
@@ -71,8 +71,8 @@ export function ReportTypesMatrix() {
               <td className="p-4" />
               {reportTypes.map((t) => (
                 <td key={t.slug} className="p-4">
-                  <Button href="/#contact" size="sm" variant="secondary" className="w-full">
-                    Request
+                  <Button href={`/${t.slug}`} size="sm" variant="secondary" className="w-full">
+                    View Details
                   </Button>
                 </td>
               ))}

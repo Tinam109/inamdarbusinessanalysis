@@ -88,15 +88,19 @@ export default function LenderCreditDiligencePage() {
   return (
     <>
       <PageHero
-        eyebrow="For Lenders, NBFCs & Fintechs"
+        eyebrow="Lender Credit Diligence — ₹3,999 — Delivered within 24–48 hours"
         title={
           <>
-            Public record due diligence for{" "}
-            <span className="text-gradient">SME credit & lending</span>
+            Check the Borrower Before You{" "}
+            <span className="text-gradient">Sanction SME Credit.</span>
           </>
         }
-        description="Verify registered MCA charges, DRT litigation, GST filing patterns, and promoter liabilities across official Indian public records before approving trade credit or business loans."
-        bullets={["MCA bank charges", "DRT court recovery search", "Promoter linked liabilities"]}
+        description="Verify registered MCA charges, open bank liens, DRT/NCLT insolvency, GST filing signals, regulatory issues, and promoter-linked entities before disbursing credit or loan facilities — delivered in 24–48 hours for ₹3,999."
+        bullets={[
+          "₹3,999 Fixed Price",
+          "24–48 Hour Turnaround",
+          "MCA Open Charges & NCLT Insolvency Scan",
+        ]}
       />
 
       <FeatureGrid
