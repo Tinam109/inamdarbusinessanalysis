@@ -293,7 +293,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How long does a report take?",
-    a: "A Basic Check is usually 24–48 working hours, a Standard Report 3–5 working days, and an Enhanced Report 5–7 working days or scope-dependent. We confirm the timeline when we agree scope.",
+    a: "Our Vendor Risk Report is delivered within 48 hours for ₹2,499. Litigation & Compliance Check and Lender Credit Diligence are delivered in 24–48 hours (₹3,499 and ₹3,999 respectively). The Investor Red Flag Report is delivered in 48 hours for ₹6,999.",
   },
   {
     q: "What if no records are found?",

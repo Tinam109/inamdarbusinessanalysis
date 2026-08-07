@@ -129,7 +129,7 @@ Offer copy: *"Free 1-page checklist: the 12 public-record signals to check befor
 > Hi [Name], thanks for reaching out. We've received your request regarding **[entity]**. We'll come back within one working day with suggested scope (Basic / Standard / Enhanced), turnaround and a quote. If anything is urgent, reply here or WhatsApp +91 91064 69665. — Inamdar Business Analysis · Source-linked public-record risk reports. *This is not a credit rating, legal opinion or private investigation.*
 
 ### Sales response template (after a lead)
-> Hi [Name], thanks for the details on **[entity]**. Based on what you've shared, I'd suggest a **[Standard Report]** — it covers identity, MCA/GST, litigation (district & High Court), consumer disputes and a director-linkage review, with source links and a date of search. Turnaround ~[3–5 working days]; indicative price **[₹___]**. If you'd like deeper litigation/regulatory/IBC and adverse-record review, the **Enhanced Report** fits. Happy to confirm scope on a quick call: [cal link]. Shall I proceed?
+> Hi [Name], thanks for the details on **[entity]**. Based on what you've shared, I'd suggest our **[Vendor Risk Report / Lender Credit Diligence / Investor Red Flag Report]** — it covers identity, MCA charge registers, litigation (district & High Court), GST compliance and a director-linkage review, with source links and a clear date of search. Turnaround is **24–48 hours** with fixed pricing from **₹2,499**. Happy to confirm scope on a quick call: [cal link]. Shall I proceed?
 
 ### Exit-intent / bottom CTA
 > **Before you go — not sure what you need?** Share the entity and we'll suggest the right scope, free. [Get Scope & Quote] · [View Sample Report]

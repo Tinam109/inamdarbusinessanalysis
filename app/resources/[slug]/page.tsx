@@ -172,11 +172,11 @@ export default function ResourceSlugPage({ params }: { params: { slug: string } 
             <Card className="border border-accent/20 bg-accent-50/20 p-8 rounded-2xl relative overflow-hidden">
               <div className="relative z-10">
                 <h3 className="font-display text-xl font-semibold text-brand mb-2">
-                  Verify Your Counterparties in 48 Hours
+                  Verify Your Counterparties in 24–48 Hours
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 max-w-xl">
                   Do not rely on incomplete public database matching. Get a comprehensive,
-                  human-reviewed Standard Report on any Indian corporate or promoter.
+                  human-reviewed public records diligence report on any Indian corporate or promoter.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button href="/sample-report" variant="accent" size="sm">
@@ -356,7 +356,7 @@ export default function ResourceSlugPage({ params }: { params: { slug: string } 
               {/* Order Report Widget */}
               <Card className="border border-slate-200 p-6 bg-white shadow-soft">
                 <span className="inline-flex items-center gap-1 rounded bg-accent-50 text-[10px] font-bold uppercase tracking-wider text-accent px-2 py-0.5 mb-4">
-                  Standard Report
+                  Due Diligence Report
                 </span>
                 <h4 className="font-display text-lg font-semibold text-brand mb-1">
                   Public Records Vetting
