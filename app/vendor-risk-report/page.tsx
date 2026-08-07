@@ -17,13 +17,13 @@ import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/componen
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
 
 export const metadata: Metadata = {
-  title: "Vendor Risk Report, Check Vendors Before You Onboard",
+  title: "Vendor Risk Report — ₹2,499 — Delivered within 48 hours | Inamdar Business Analysis",
   description:
-    "Public-records based vendor risk reports for procurement teams, SMEs and corporates. Verify a supplier's identity, status, litigation and compliance indicators before onboarding, issuing a PO or extending business credit.",
+    "Vendor Risk Report — ₹2,499 — Delivered within 48 hours. Check suppliers and vendors before onboarding, raising a PO or releasing an advance.",
   openGraph: {
-    title: "Vendor Risk Report | Inamdar Business Analysis",
+    title: "Vendor Risk Report — ₹2,499 — Delivered within 48 hours",
     description:
-      "Check vendors before onboarding, issuing POs or extending business credit, with source-backed public records.",
+      "Vendor Risk Report — ₹2,499 — Delivered within 48 hours. Check suppliers and vendors before onboarding, raising a PO or releasing an advance.",
   },
 };
 

@@ -20,14 +20,14 @@ import { SampleReportViewer } from "@/components/SampleReportViewer";
 import { DisclaimerBlock, ContactSection } from "@/components/Sections";
 
 export const metadata: Metadata = {
-  title: "Sample Business Risk Report, Download PDF & Interactive Preview | Inamdar",
+  title: "See What an Inamdar Risk Report Looks Like Before You Order | Sample Report",
   description:
-    "Explore an interactive preview and download an illustrative sample of an Inamdar Business Analysis public-record risk report covering MCA charges, litigation, GST compliance, and promoter background checks.",
+    "See What an Inamdar Risk Report Looks Like Before You Order. Explore our fictional sample business risk report PDF demonstrating MCA charge registers, eCourts litigation, and GST compliance signals.",
   alternates: { canonical: "https://www.inamdarbusinessanalysis.in/sample-report" },
   openGraph: {
-    title: "Sample Business Risk Report (PDF & Interactive Preview)",
+    title: "See What an Inamdar Risk Report Looks Like Before You Order",
     description:
-      "See exactly what you receive: a clean, source-linked public-record risk report. Explore the interactive sample.",
+      "See What an Inamdar Risk Report Looks Like Before You Order. Explore our fictional sample business risk report PDF demonstrating MCA charge registers, eCourts litigation, and GST compliance signals.",
   },
 };
 

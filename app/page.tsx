@@ -1,6 +1,19 @@
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Inamdar Business Analysis | Public Records Business Risk Reports India",
+  description:
+    "Know who you are dealing with before you sign, invest, lend, onboard, or release funds. Fixed-price due diligence from ₹2,499 with 24–48 hour delivery.",
+  openGraph: {
+    title: "Inamdar Business Analysis | Public Records Business Risk Reports India",
+    description:
+      "Know who you are dealing with before you sign, invest, lend, onboard, or release funds. Fixed-price due diligence from ₹2,499 with 24–48 hour delivery.",
+  },
+};
+
 import {
   ArrowRight,
   Building2,
