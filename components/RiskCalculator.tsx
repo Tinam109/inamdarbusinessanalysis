@@ -182,43 +182,36 @@ export function RiskCalculator() {
             </span>
 
             <div className="mt-4 space-y-4">
-              <div className="rounded-xl bg-white/10 p-3.5 backdrop-blur-sm">
-                <span className="text-xs text-slate-300">Total Annual Exposure Underwritten</span>
+              <div className="rounded-xl bg-white/10 p-4 backdrop-blur-sm">
+                <span className="text-xs text-slate-300">Total Annual Commercial Exposure Under Review</span>
                 <div className="mt-1 font-display text-2xl font-bold text-white">
                   ₹{totalExposureCr.toFixed(2)} Crores
                 </div>
-              </div>
-
-              <div className="rounded-xl border border-rose-500/30 bg-rose-950/40 p-3.5">
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-400">
-                  <AlertTriangle className="h-3.5 w-3.5" />
-                  Estimated Potential Risk / Fraud Exposure
-                </div>
-                <div className="mt-1 font-display text-xl font-bold text-rose-200">
-                  ₹{potentialRiskExposureLakhs >= 100 ? `${(potentialRiskExposureLakhs / 100).toFixed(2)} Cr` : `${potentialRiskExposureLakhs.toFixed(1)} Lakhs`}
-                </div>
-                <p className="mt-1 text-[11px] text-slate-400">
-                  Based on industry default & undisclosed charge benchmarks (~{selectedType.defaultRiskRate}%).
+                <p className="mt-1 text-xs text-slate-300">
+                  {annualCount} entities × ₹{dealValueLakhs >= 100 ? `${(dealValueLakhs / 100).toFixed(1)} Cr` : `${dealValueLakhs} Lakhs`} average exposure
                 </p>
               </div>
 
-              <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-3.5">
+              <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-4">
                 <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
-                  <ShieldCheck className="h-3.5 w-3.5" />
-                  Full Inamdar Diligence Investment
+                  <ShieldCheck className="h-4 w-4" />
+                  Total Diligence Investment
                 </div>
                 <div className="mt-1 flex items-baseline gap-2">
-                  <span className="font-display text-xl font-bold text-emerald-300">
+                  <span className="font-display text-2xl font-bold text-emerald-300">
                     ₹{totalDiligenceCost.toLocaleString("en-IN")}
                   </span>
                   <span className="text-xs text-emerald-400/80 font-medium">
-                    (₹{selectedType.reportPrice.toLocaleString("en-IN")} / entity)
+                    ({annualCount} × ₹{selectedType.reportPrice.toLocaleString("en-IN")})
                   </span>
                 </div>
-                <div className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald-300">
-                  <CheckCircle2 className="h-3 w-3" />
-                  Estimated ROI: {roiMultiplier}x risk protection
-                </div>
+                <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                  Source-backed verification for your entire annual counterparty onboarding.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-700/60 bg-slate-800/50 p-3.5 text-xs leading-relaxed text-slate-300">
+                <span className="font-semibold text-slate-200">Note:</span> The calculator compares diligence cost with the value of commercial exposure being reviewed. It does not estimate the probability of default or guarantee avoided losses.
               </div>
             </div>
           </div>

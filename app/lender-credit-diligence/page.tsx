@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/components/Sections";
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
+import { DiscussCompanyForm } from "@/components/DiscussCompanyForm";
 
 export const metadata: Metadata = {
   title: "Lender & Credit Due Diligence | Public Records Credit Checks India",
@@ -141,10 +142,11 @@ export default function LenderCreditDiligencePage() {
         steps={steps}
       />
 
-      <CTABanner
-        title="Need a credit due diligence report on a borrower?"
-        description="Get a human-reviewed public records report delivered to your inbox in 24–48 hours."
-      />
+      <section className="section-pad">
+        <div className="container-x max-w-4xl">
+          <DiscussCompanyForm defaultCategory="SME Credit" />
+        </div>
+      </section>
 
       <DisclaimerBlock />
       <ContactSection />

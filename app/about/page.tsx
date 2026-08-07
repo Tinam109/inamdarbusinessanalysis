@@ -56,6 +56,14 @@ export default function AboutPage() {
                   Tirth Inamdar
                 </div>
                 <div className="text-sm text-slate-500">Founder &amp; Corporate Lawyer</div>
+                <a
+                  href="https://www.linkedin.com/in/tirth-inamdar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1 text-xs font-semibold text-accent-700 transition-colors hover:border-accent-300 hover:bg-accent-50"
+                >
+                  LinkedIn Profile &rarr;
+                </a>
               </div>
               <div>
                 <SectionHeading

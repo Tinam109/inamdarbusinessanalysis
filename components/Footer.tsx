@@ -32,6 +32,7 @@ const columns = [
       { label: "Sources & Coverage", href: "/sources" },
       { label: "About", href: "/about" },
       { label: "Pricing", href: "/#pricing" },
+      { label: "Privacy Policy", href: "/privacy" },
       { label: "FAQ", href: "/#faq" },
     ],
   },

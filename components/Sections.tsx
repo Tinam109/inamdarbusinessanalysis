@@ -152,13 +152,16 @@ export function PageHero({
               ))}
             </ul>
           )}
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#contact" size="lg">
-              Request a Report
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button href="#discuss" size="lg">
+              Discuss a Company
               <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button href="/#report-scope" variant="secondary" size="lg">
-              View Report Scope
+            <Button href="/order" variant="secondary" size="lg">
+              Request Due Diligence
+            </Button>
+            <Button href="/sample-report" variant="ghost" size="lg" className="text-slate-600">
+              View Sample Risk Report
             </Button>
           </div>
         </Reveal>

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/components/Sections";
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
+import { DiscussCompanyForm } from "@/components/DiscussCompanyForm";
 
 export const metadata: Metadata = {
   title: "Investor Red Flag Report, Screen Before You Invest or Lend",
@@ -93,10 +94,11 @@ export default function InvestorRedFlagReportPage() {
         items={deliverables}
       />
 
-      <CTABanner
-        title="See the risk before you write the cheque"
-        description="Tell us the company and promoters you are screening. We will reply with scope, turnaround and next steps."
-      />
+      <section className="section-pad">
+        <div className="container-x max-w-4xl">
+          <DiscussCompanyForm defaultCategory="Investment" />
+        </div>
+      </section>
 
       <DisclaimerBlock />
       <ContactSection />

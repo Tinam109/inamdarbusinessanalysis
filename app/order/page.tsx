@@ -80,10 +80,10 @@ export default function OrderPage() {
               <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lift">
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
                   <Lock className="h-4 w-4 text-emerald-600" />
-                  Confidentiality Guaranteed
+                  Confidential Handling
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Searches are conducted purely across publicly accessible government registries and court records. Target entities are never notified of inquiries.
+                  Enquiry and report information is handled confidentially and used only to scope and prepare the requested diligence. Target entities are never notified of inquiries.
                 </p>
                 <div className="mt-4 flex items-center gap-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-700">
                   <Clock className="h-4 w-4 text-accent-600" />

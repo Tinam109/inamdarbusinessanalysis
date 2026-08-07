@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/components/Sections";
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
+import { DiscussCompanyForm } from "@/components/DiscussCompanyForm";
 
 export const metadata: Metadata = {
   title: "Vendor Risk Report — ₹2,499 — Delivered within 48 hours | Inamdar Business Analysis",
@@ -98,10 +99,11 @@ export default function VendorRiskReportPage() {
         items={deliverables}
       />
 
-      <CTABanner
-        title="Onboard the right vendors with confidence"
-        description="Run a public-records check before the PO. Tell us the vendor and we will come back with scope and turnaround."
-      />
+      <section className="section-pad">
+        <div className="container-x max-w-4xl">
+          <DiscussCompanyForm defaultCategory="Vendor Risk" />
+        </div>
+      </section>
 
       <DisclaimerBlock />
       <ContactSection />

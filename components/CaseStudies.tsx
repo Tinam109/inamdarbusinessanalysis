@@ -19,10 +19,10 @@ const CASE_STUDIES: CaseStudy[] = [
     id: "nbfc-loan",
     category: "Lender Credit Diligence",
     clientType: "Mid-Market NBFC",
-    targetDealSize: "₹4.5 Cr Working Capital Loan",
-    riskDiscovered: "Undisclosed Prior Floating Charge on Book Debts & Unregistered Director Resignations",
-    outcome: "Lender discovered a pre-existing ₹3.8 Cr floating charge registered with Union Bank. Prevented subordinate collateral claim during potential recovery.",
-    financialSaved: "₹4.5 Cr default risk mitigated",
+    targetDealSize: "₹4.5 Cr Working Capital Facility",
+    riskDiscovered: "Prior Floating Charge on Book Debts & Unregistered Director Resignations",
+    outcome: "Lender identified a pre-existing ₹3.8 Cr floating charge registered with Union Bank, clarifying collateral priorities before sanction.",
+    financialSaved: "Primary charge risk identified",
     icon: Landmark,
   },
   {
@@ -32,7 +32,7 @@ const CASE_STUDIES: CaseStudy[] = [
     targetDealSize: "₹1.2 Cr Advance Component Supply",
     riskDiscovered: "Active Section 138 (Cheque Bounce) Criminal Cases & GSTR-3B Mismatch",
     outcome: "Identified 3 active criminal proceedings under Negotiable Instruments Act filed by sub-vendors against the supplier in Esplanade Court, Mumbai.",
-    financialSaved: "Supply chain bottleneck avoided",
+    financialSaved: "Counterparty risk identified",
     icon: Factory,
   },
   {
@@ -42,7 +42,7 @@ const CASE_STUDIES: CaseStudy[] = [
     targetDealSize: "₹6.0 Cr Pre-Series A Investment",
     riskDiscovered: "2 Struck-Off Directorships & Undisclosed Material Arbitration",
     outcome: "Promoter background check revealed the co-founder had a previous private limited entity struck off by ROC Mumbai under Section 248 for non-compliance.",
-    financialSaved: "Governance & regulatory penalty prevented",
+    financialSaved: "Struck-off entity risk identified",
     icon: Building,
   },
   {
@@ -51,8 +51,8 @@ const CASE_STUDIES: CaseStudy[] = [
     clientType: "Infrastructure & EPC Firm",
     targetDealSize: "₹8.0 Cr Subcontracting Tender",
     riskDiscovered: "EPFO & Labor Non-Compliance Penalty Notices",
-    outcome: "Uncovered pending statutory recovery notices under EPF & MP Act 1952 which would have created joint statutory liability for the principal employer.",
-    financialSaved: "₹65 Lakhs statutory liability averted",
+    outcome: "Uncovered pending statutory recovery notices under EPF & MP Act 1952 relevant to joint statutory employer obligations.",
+    financialSaved: "Joint liability risk identified",
     icon: Scale,
   },
 ];
@@ -63,13 +63,13 @@ export function CaseStudies() {
       <div className="container-x">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-accent-100 bg-accent-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-700">
-            Real-World Risk Mitigation
+            Illustrative Diligence Scenarios
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-brand sm:text-4xl">
-            How Pre-Contract Verification Protects Balance Sheets
+            How Public-Record Verification Informs Business Decisions
           </h2>
           <p className="mt-3 text-base text-slate-600">
-            Real anonymized case studies showing how Indian businesses, NBFCs, and investors avoided bad debts, litigation, and fraud.
+            The following examples are hypothetical scenarios illustrating how public-record findings may affect business decisions.
           </p>
         </div>
 

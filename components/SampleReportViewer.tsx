@@ -39,7 +39,7 @@ export function SampleReportViewer() {
               Target: Apex Logistics & Industrial Infrastructure Pvt Ltd
             </h3>
             <p className="mt-0.5 text-xs text-slate-300">
-              CIN: U60200MH2018PTC319842 · Search Date: 07 August 2026 · Source Verified
+              CIN: U60200MH2018PTC319842 · Search Date: 07 August 2026 · Illustrative Demo Sample
             </p>
           </div>
 

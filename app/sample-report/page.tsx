@@ -116,7 +116,7 @@ export default function SampleReportPage() {
               Live Interactive Preview
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-brand sm:text-4xl">
-              Inspect Real Sample Findings
+              Inspect Illustrative Sample Findings
             </h2>
             <p className="mt-2 text-sm text-slate-600">
               Click through the tabs below to explore how MCA charge registers, commercial court litigation, and GST filings are synthesized into actionable risk flags.

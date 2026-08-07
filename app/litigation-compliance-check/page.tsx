@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { PageHero, DisclaimerBlock, ContactSection, CTABanner } from "@/components/Sections";
 import { FeatureGrid, StepsSection, ChecklistSplit } from "@/components/PageBlocks";
+import { DiscussCompanyForm } from "@/components/DiscussCompanyForm";
 
 export const metadata: Metadata = {
   title: "Litigation & Compliance Check, Public Records Search",
@@ -93,10 +94,11 @@ export default function LitigationComplianceCheckPage() {
         items={deliverables}
       />
 
-      <CTABanner
-        title="Search the public record with confidence"
-        description="Tell us the subjects and the scope. We will reply with what we can cover, turnaround and next steps."
-      />
+      <section className="section-pad">
+        <div className="container-x max-w-4xl">
+          <DiscussCompanyForm defaultCategory="Litigation" />
+        </div>
+      </section>
 
       <DisclaimerBlock />
       <ContactSection />
